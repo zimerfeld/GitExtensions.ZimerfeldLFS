@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿---
+=======
+---
+>>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 tipo: sistema
 tags: [build, versão, nupkg, deploy]
 atualizado: 2026-07-01
@@ -10,7 +14,11 @@ atualizado: 2026-07-01
 
 `major.minor.build` — somente o `build` é incrementado automaticamente pelo `build.ps1`. Major e minor são alterados manualmente.
 
+<<<<<<< HEAD
 **Versão atual:** `1.0.1` *(fonte da verdade: `.nuspec` / `.csproj`)*
+=======
+**Versão atual:** `1.0.0` *(fonte da verdade: `.nuspec` / `.csproj`)*
+>>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 
 > [!note] Dicionários de idioma embutidos (sem satellite assemblies)
 > Os textos de UI vivem em `Resources/ZimerfeldLFS.en-US.json` e `Resources/ZimerfeldLFS.pt-BR.json`,
@@ -31,7 +39,10 @@ build.ps1  [-Force]
   ├─ 3. Bump no .nuspec  ← <version>
   ├─ 4. Bump no .csproj  ← <Version>
   ├─ 4b. Carimba versão + data no topo dos READMEs (README.md / .pt-BR / .en-US)
+<<<<<<< HEAD
   ├─ 4c. Carimba versão + data neste cofre Obsidian (notas que espelham a versão)
+=======
+>>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
   ├─ 5. dotnet build -c Release
   ├─ 6. Copia DLL → C:\Program Files\GitExtensions\Plugins\  (requer Admin)
   ├─ 6b. Copia DLL → tools\net9.0-windows\  (para o nupkg)
@@ -56,7 +67,11 @@ build.ps1  [-Force]
 | `GitExtensions.ZimerfeldLFS.csproj` | `<Version>` (e `**Versão atual**` + link do NuGet no README.md) |
 | `README.md` / `README.pt-BR.md` / `README.en-US.md` | `**Version/Versão:**` e `**Updated/Atualizado em:**` |
 
+<<<<<<< HEAD
 > **Nota:** o `build.ps1` carimba versão/data nos **READMEs** (seção 4b) **e** neste cofre Obsidian (seção 4c) — as notas que espelham a versão atual (Projeto, README espelho, Visão Geral, Versionamento, HOME) ficam em sincronia automática, igual ao irmão CommitMsg.
+=======
+> **Nota:** hoje o `build.ps1` carimba versão/data nos **READMEs**, mas **não** neste cofre Obsidian (diferente do irmão CommitMsg, que carimba as duas coisas). Ao evoluir o script, incluir o carimbo do cofre para mantê-lo em sincronia.
+>>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 
 ## Instalação / desinstalação manual
 

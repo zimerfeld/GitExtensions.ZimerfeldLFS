@@ -22,6 +22,10 @@ tags: [preferencia, contexto, pessoa]
 > - Manter este cofre de memória atualizado a cada sessão
 
 ## Projetos
+<<<<<<< HEAD
 - [[GitExtensions.ZimerfeldLFS]] — plugin C#/WinForms para GitExtensions que gerencia o Git LFS numa janela dedicada em 3 etapas — `C:\GitExtensions\GitExtensions.ZimerfeldLFS` (este cofre)
 - [[GitExtensions.ZimerfeldCommitMsg]] — plugin C#/WinForms para GitExtensions que gera mensagens de commit (Conventional Commits, pt-BR) — `C:\GitExtensions\ZimerfeldCommitMsg` (cofre próprio)
+=======
+- [[GitExtensions.ZimerfeldCommitMsg]] — plugin C#/WinForms para GitExtensions que gera mensagens de commit (Conventional Commits, pt-BR) — `C:\GitExtensions\ZimerfeldCommitMsg`
+>>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 - [[GitExtensions.ZimerfeldTree]] — plugin C#/WinForms para GitExtensions (árvore hierárquica de branches) — `C:\GitExtensions\ZimerfeldTree` (cofre próprio)

@@ -28,7 +28,7 @@ Criar um novo plugin de GitExtensions — **ZimerfeldLFS** — para gerenciar o 
 - **Diretório independente do host** — evita o bug de "repo errado ao trocar" — ver [[Diretório de trabalho independente]].
 - **Fluxo em 3 abas** espelha o fluxo padrão do Git LFS — ver [[Fluxo em 3 etapas (abas)]].
 - Rastrear **stagea o `.gitattributes` automaticamente** (senão colaboradores não sabem que os arquivos são LFS).
-- **Dependência marcadora** `GitExtensions.Extensibility 1.0.0.129` no nuspec é o que faz o pacote aparecer no Plugin Manager; DLL em `lib\` raiz (NU5101 intencional).
+- **Dependência marcadora** `GitExtensions.Extensibility [0.4.0, 0.5.0)` no nuspec é o que faz o pacote aparecer no Plugin Manager — a faixa precisa conter a versão que o manager **anuncia** para o host (0.4.0 no GE6), não o runtime instalado; DLL em `lib\` raiz (NU5101 intencional).
 
 ## 📝 Arquivos tocados
 - Código: `src\GitExtensions.ZimerfeldLFS\*.cs`, `*.csproj`, `*.nuspec`, `Resources\*.json`, `tools\icon-generator\Generate-LfsIcon.ps1`, `build.ps1`, `README*.md`

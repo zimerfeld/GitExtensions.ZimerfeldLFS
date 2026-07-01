@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Target Windows-only WinForms; must match the runtime GitExtensions uses (net9.0) -->
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <!-- Output assembly name must match what install.ps1 / nuspec reference -->
+    <AssemblyName>GitExtensions.Plugins.ZimerfeldLFS</AssemblyName>
+    <RootNamespace>GitExtensions.ZimerfeldLFS</RootNamespace>
+
+    <!-- Version is managed by build.ps1; keep in sync with the .nuspec -->
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <NeutralLanguage>pt-BR</NeutralLanguage>
+
+    <!-- Plugin DLLs are loaded by GitExtensions — do not produce a standalone exe -->
+    <OutputType>Library</OutputType>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+
+    <!-- Strip debug symbols from Release builds to keep the DLL lean -->
+    <DebugType Condition="'$(Configuration)'=='Release'">none</DebugType>
+    <Optimize Condition="'$(Configuration)'=='Release'">true</Optimize>
+
+    <!-- Benign: GitExtensions DLLs pull WindowsBase 8.0 while the net9 ref pack supplies 4.0.
+         The runtime resolves the correct assembly at load time, so demote MSB3277 to a message. -->
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+
+    <!-- Metadata shown in Windows Explorer / NuGet Gallery -->
+    <Product>GitExtensions ZimerfeldLFS Plugin</Product>
+    <Company>Zimerfeld</Company>
+    <Copyright>Copyright © 2026 Zimerfeld</Copyright>
+    <Description>
+      GitExtensions plugin that manages Git Large File Storage (LFS) in a dedicated window,
+      guiding the user through Installation, the basic track/commit/push workflow, and
+      cloning/pulling — with an independent working-directory selector.
+    </Description>
+
+    <!-- Host reference assemblies versioned in the repo (refs/) → deterministic build on any
+         Windows machine, no prebuild download and no network. See refs/README.md. -->
+    <GitExtensionsRefPath>$(MSBuildProjectDirectory)\..\..\refs</GitExtensionsRefPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Plugin / window title-bar icon (exploding large files), 16×16 PNG -->
+    <EmbeddedResource Include="Resources\ico.png" Condition="Exists('Resources\ico.png')" />
+    <!-- GitHub Sponsors + Ko-fi badges shown in the top banner of the window -->
+    <EmbeddedResource Include="Resources\sponsor-badge.png" Condition="Exists('Resources\sponsor-badge.png')" />
+    <EmbeddedResource Include="Resources\kofi-badge.png"    Condition="Exists('Resources\kofi-badge.png')" />
+    <!-- Language dictionaries (one JSON file per language). Loaded at runtime by I18n via
+         GetManifestResourceStream("GitExtensions.ZimerfeldLFS.Resources.<file>").
+         WithCulture=false + explicit LogicalName stop MSBuild from reading the ".en-US"/".pt-BR"
+         infix as a culture (which would divert these into satellite assemblies). -->
+    <EmbeddedResource Include="Resources\ZimerfeldLFS.pt-BR.json" WithCulture="false" LogicalName="GitExtensions.ZimerfeldLFS.Resources.ZimerfeldLFS.pt-BR.json" />
+    <EmbeddedResource Include="Resources\ZimerfeldLFS.en-US.json" WithCulture="false" LogicalName="GitExtensions.ZimerfeldLFS.Resources.ZimerfeldLFS.en-US.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Host DLLs resolved from refs/ (versioned), compile-time only (Private=false):
+         GitExtensions supplies these at runtime; nothing is copied to output or shipped. -->
+    <Reference Include="GitExtensions.Extensibility">
+      <HintPath>$(GitExtensionsRefPath)\GitExtensions.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>$(GitExtensionsRefPath)\System.ComponentModel.Composition.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>

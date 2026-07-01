@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 <#
 .SYNOPSIS
     Compila o plugin ZimerfeldLFS, incrementa a versao (major.minor.build) e gera o .nupkg.
@@ -97,6 +97,39 @@ foreach ($doc in @("$PSScriptRoot\README.md", "$PSScriptRoot\README.pt-BR.md", "
         $c = $c -replace '(?m)^\*\*(Atualizado em|Updated on|Updated):\*\*\s+\d{4}-\d{2}-\d{2}', "**`$1:** $today"
         [System.IO.File]::WriteAllText($doc, $c, [System.Text.Encoding]::UTF8)
         Write-Host "$([System.IO.Path]::GetFileName($doc)) atualizado para $newVersion ($today)"
+    }
+}
+
+# -- 4c. Carimbar a versao no cofre Obsidian (o vault espelha o README) --------
+# O bump tambem reflete no cofre, para o vault nao ficar defasado em relacao ao
+# README -- mesma versao em README/csproj/nuspec/vault, sem sync manual. Atualiza o
+# 'versao:'/'atualizado:' do frontmatter e as variantes de 'Versao atual' (bold,
+# tabela e rotulo+crase) das notas que espelham a versao ATUAL do projeto.
+# Roda ANTES do pack, entao o .nupkg permanece o arquivo mais novo e a deteccao de
+# mudancas (secao 1b) nao dispara em loop. Uma linha de log por nota atualizada.
+$vault = "$PSScriptRoot\OBSIDIAN\CLAUDE"
+$obsidianDocs = @(
+    "$vault\01 - Projetos\GitExtensions.ZimerfeldLFS.md",
+    "$vault\02 - Conhecimento\README — Instalação, Uso e Build.md",
+    "$vault\Sistema\Visão Geral.md",
+    "$vault\Sistema\Versionamento.md",
+    "$vault\HOME.md"
+)
+foreach ($obsDoc in $obsidianDocs) {
+    if (Test-Path $obsDoc) {
+        $v = Get-Content $obsDoc -Raw -Encoding UTF8
+        # Frontmatter
+        $v = $v -replace '(?m)^versao:\s+[\d\.]+',                   "versao: $newVersion"
+        $v = $v -replace '(?m)^atualizado:\s+\d{4}-\d{2}-\d{2}',     "atualizado: $today"
+        # "Versao atual: **X**" (texto/negrito)
+        $v = $v -replace 'Versão atual: \*\*[\d\.]+\*\*',            "Versão atual: **$newVersion**"
+        # "| Versao atual | `X` |" (tabela)  e  "**Versao atual:** `X`" (rotulo+crase)
+        $v = $v -replace '(\|\s*Versão atual\s*\|\s*`)[\d\.]+(`)',   ('${1}' + $newVersion + '${2}')
+        $v = $v -replace '(\*\*Versão atual:\*\*\s*`)[\d\.]+(`)',    ('${1}' + $newVersion + '${2}')
+        # HOME.md: linha "`X` — compilada ..." (comeca com a versao entre crases)
+        $v = $v -replace '(?m)^`[\d\.]+`(\s+—\s+compilada)',        ('`' + $newVersion + '`' + '${1}')
+        [System.IO.File]::WriteAllText($obsDoc, $v, [System.Text.Encoding]::UTF8)
+        Write-Host "Obsidian: $([System.IO.Path]::GetFileName($obsDoc)) atualizado para $newVersion ($today)"
     }
 }
 

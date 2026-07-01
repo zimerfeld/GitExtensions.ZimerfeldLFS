@@ -10,7 +10,7 @@
     <RootNamespace>GitExtensions.ZimerfeldLFS</RootNamespace>
 
     <!-- Version is managed by build.ps1; keep in sync with the .nuspec -->
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
 
@@ -47,7 +47,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Plugin / window title-bar icon (exploding large files), 16×16 PNG -->
+    <!-- Plugin / window title-bar icon (4 quadrants: joystick, music note, movie play,
+         database — with a lit bomb at the center), 16×16 PNG -->
     <EmbeddedResource Include="Resources\ico.png" Condition="Exists('Resources\ico.png')" />
     <!-- GitHub Sponsors + Ko-fi badges shown in the top banner of the window -->
     <EmbeddedResource Include="Resources\sponsor-badge.png" Condition="Exists('Resources\sponsor-badge.png')" />

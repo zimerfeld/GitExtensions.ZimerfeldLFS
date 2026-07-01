@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  GitExtensions.ZimerfeldLFS.nuspec
+  NuGet package manifest for the ZimerfeldLFS GitExtensions plugin.
+
+  This file is read by build.ps1, which:
+    1. Increments the <version> tag (major.minor.BUILD)
+    2. Updates the matching <Version> in the .csproj
+    3. Builds in Release mode
+    4. Runs: nuget pack GitExtensions.ZimerfeldLFS.nuspec -OutputDirectory <root>
+
+  File paths below are relative to this .nuspec (i.e. src\GitExtensions.ZimerfeldLFS\).
+  The build script copies the compiled DLL to tools\net9.0-windows\ before packing.
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <!-- ── Identity ───────────────────────────────────────────────────── -->
+    <id>GitExtensions.ZimerfeldLFS</id>
+    <version>1.0.0</version>
+    <title>ZimerfeldLFS — Git Large File Storage for GitExtensions</title>
+    <authors>Zimerfeld</authors>
+    <owners>Zimerfeld</owners>
+    <!-- ── Licensing — per NuGet authoring best practices ────────────── -->
+    <!-- CC BY-NC-ND 4.0 is a valid SPDX id but is NOT OSI/FSF-approved, so NuGet does not host
+         it on licenses.nuget.org and the type="expression" form is discouraged for it. The full
+         license text is embedded instead via type="file" (LICENSE.txt at the package root). -->
+    <license type="file">LICENSE.txt</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!-- ── Description ───────────────────────────────────────────────── -->
+    <description>
+GitExtensions plugin that manages Git Large File Storage (LFS) in a dedicated, non-modal window.
+Git LFS replaces large files (audio, video, datasets) with lightweight text pointers inside your
+repository; the actual content is hosted on a separate remote server, speeding up cloning and
+preventing repository bloat. The window guides the user through three steps — Installation, the
+basic track/commit/push workflow, and cloning/pulling — against a working directory chosen
+independently of the GitExtensions host.
+
+Plugin do GitExtensions que gerencia o Git Large File Storage (LFS) em uma janela dedicada e
+não-modal. O Git LFS substitui arquivos grandes (áudio, vídeo, datasets) por ponteiros de texto
+leves no repositório; o conteúdo real fica em um servidor remoto separado, acelerando o clone e
+evitando o inchaço do repositório. A janela conduz o usuário em três etapas — Instalação, o fluxo
+básico de track/commit/push e o clone/pull — com um diretório de trabalho escolhido de forma
+independente do GitExtensions.
+
+Features / Funcionalidades:
+  • Step 1 · Installation: detect git-lfs, run "git lfs install" / Etapa 1 · Instalação
+  • Step 2 · Basic workflow: track glob patterns, list LFS files, commit, push / Etapa 2 · Fluxo básico
+  • Step 3 · Cloning &amp; pulling: git lfs pull / fetch --all / checkout / status / Etapa 3 · Clone &amp; Pull
+  • Independent working-directory dropdown / Dropdown de diretório de trabalho independente
+  • Output console with the exact git commands run / Console de saída com os comandos git executados
+  • PT-BR / EN-US languages and a Debug toggle / Idiomas PT-BR / EN-US e alternância de Debug
+    </description>
+    <summary>
+      Git LFS manager plugin for GitExtensions — Installation, track/commit/push and clone/pull in a
+      dedicated window. Plugin gerenciador de Git LFS para o GitExtensions — Instalação, track/commit/push
+      e clone/pull em uma janela dedicada.
+    </summary>
+    <!-- ── Project metadata ──────────────────────────────────────────── -->
+    <projectUrl>https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS</projectUrl>
+    <readme>README.md</readme>
+    <icon>icon.png</icon>
+    <tags>gitextensions plugin git lfs large-file-storage large files</tags>
+    <copyright>Copyright © 2026 Zimerfeld</copyright>
+    <language>pt-BR</language>
+    <!-- ── Release notes ─────────────────────────────────────────────── -->
+    <releaseNotes>
+1.0.0 — Initial public release.
+1.0.0 — Primeiro lançamento público.
+    </releaseNotes>
+    <!-- ── GitExtensions plugin marker ───────────────────────────────────
+         The GitExtensions Plugin Manager filters the nuget.org feed to packages that DEPEND on
+         GitExtensions.Extensibility — without this the package is published but never appears in
+         the in-app Plugin Manager. 1.0.0.129 is the highest published version <= the installed
+         GitExtensions 6.0.5, keeping it compatible with 6.x. -->
+    <dependencies>
+      <dependency id="GitExtensions.Extensibility" version="1.0.0.129" />
+    </dependencies>
+  </metadata>
+  <!-- ── Package contents ───────────────────────────────────────────────── -->
+  <files>
+    <!-- Plugin DLL in lib\ ROOT (no framework subfolder) — REQUIRED and intentional.
+         The GitExtensions Plugin Manager only extracts a lib group whose target framework is in
+         its moniker list: { net5.0..net10.0, any, netstandard2.0 }. A DLL in lib\ root is the
+         "any" group → matched. A lib\net9.0-windows\ subfolder is NOT in that list → the DLL would
+         NOT be extracted. So the NU5101 pack warning MUST be ignored here. -->
+    <file src="..\..\tools\net9.0-windows\GitExtensions.Plugins.ZimerfeldLFS.dll" target="lib\" />
+    <!-- Same DLL under tools\ for the legacy Package Manager Console install (install.ps1) -->
+    <file src="..\..\tools\net9.0-windows\GitExtensions.Plugins.ZimerfeldLFS.dll" target="tools\net9.0-windows\" />
+    <!-- Package Manager Console automation scripts -->
+    <file src="..\..\tools\install.ps1" target="tools\" />
+    <file src="..\..\tools\uninstall.ps1" target="tools\" />
+    <!-- License file in the package root (best practice) -->
+    <file src="..\..\LICENSE.txt" target="" />
+    <!-- READMEs displayed on nuget.org / local NuGet feeds -->
+    <file src="..\..\README.md" target="" />
+    <file src="..\..\README.pt-BR.md" target="" />
+    <file src="..\..\README.en-US.md" target="" />
+    <!-- Package icon shown on nuget.org (must match <icon> above) -->
+    <file src="Resources\icon-128.png" target="icon.png" />
+  </files>
+</package>

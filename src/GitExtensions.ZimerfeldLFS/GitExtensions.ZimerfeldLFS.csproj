@@ -47,7 +47,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Plugin / window title-bar icon (exploding large files), 16×16 PNG -->
+    <!-- Plugin / window title-bar icon (4 quadrants: joystick, music note, movie play,
+         database — with a lit bomb at the center), 16×16 PNG -->
     <EmbeddedResource Include="Resources\ico.png" Condition="Exists('Resources\ico.png')" />
     <!-- GitHub Sponsors + Ko-fi badges shown in the top banner of the window -->
     <EmbeddedResource Include="Resources\sponsor-badge.png" Condition="Exists('Resources\sponsor-badge.png')" />

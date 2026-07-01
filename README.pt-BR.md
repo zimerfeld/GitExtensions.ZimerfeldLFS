@@ -16,11 +16,19 @@ A janela espelha o fluxo padrão do Git LFS em três abas.
 
 ### 1 · Instalação
 
+![ZimerfeldLFS — aba Instalação](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotInstallation.png)
+
+*Na imagem, o Git LFS é detectado como **pronto** (`git-lfs/3.7.1`, inicializado para este usuário) para o repositório escolhido no dropdown **Working Directory**; o console de **Output** ecoa a verificação concluída com `✓ Done.`*
+
 - Windows e macOS: o Git LFS normalmente já vem incluído. Se precisar instalar manualmente, use o Homebrew (`brew install git-lfs`), o Chocolatey (`choco install git-lfs`) ou os binários oficiais em [git-lfs.com](https://git-lfs.com).
 - **Verificar instalação** roda `git lfs version` e mostra o status detectado.
 - **`git lfs install`** inicializa o LFS para a sua conta de usuário (executa uma vez por máquina).
 
 ### 2 · Fluxo básico — track / commit / push
+
+![ZimerfeldLFS — aba Fluxo Básico](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotBasicWorkflow.png)
+
+*Na imagem, dois padrões já estão rastreados (pastas `audios` e `library3d`). Digite um glob e clique em **Track** (Rastrear); selecione um padrão e clique em **Untrack** para removê-lo. **LFS-managed files** lista o que o `git lfs ls-files` retorna; **Commit…** / **Push…** abrem os diálogos nativos para o repositório selecionado.*
 
 Informe ao Git LFS quais tipos de arquivo gerenciar usando padrões glob:
 
@@ -37,6 +45,10 @@ git push origin main
 - **Commit** e **Push** abrem os diálogos nativos do GitExtensions para o repositório selecionado.
 
 ### 3 · Clone & Pull
+
+![ZimerfeldLFS — aba Clone & Pull](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotCloningPulling.png)
+
+*Na imagem, o **git lfs pull** foi executado e terminou com `✓ Done.` no console de **Output**. Cada botão corresponde a um comando, sempre executado no repositório do dropdown **Working Directory**.*
 
 Quando colaboradores ou ferramentas de deploy clonam o repositório, o Git LFS baixa os arquivos pesados automaticamente ao fazer checkout da branch. Para buscar ou restaurar o conteúdo LFS depois:
 

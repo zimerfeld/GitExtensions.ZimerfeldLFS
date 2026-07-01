@@ -20,17 +20,12 @@ Ambas referenciadas com `<Private>false</Private>` — **não** copiadas para o 
 ## Dependência do pacote NuGet (marcador do Plugin Manager)
 
 ```xml
-<<<<<<< HEAD
 <dependency id="GitExtensions.Extensibility" version="[0.4.0, 0.5.0)" />
-=======
-<dependency id="GitExtensions.Extensibility" version="1.0.0.129" />
->>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 ```
 
 > [!important] Por que a dependência marcadora existe
 > O Plugin Manager do GitExtensions filtra o feed do nuget.org por pacotes que **dependem** de
 > `GitExtensions.Extensibility`. **Sem** essa dependência, o pacote é publicado mas **nunca aparece**
-<<<<<<< HEAD
 > no Plugin Manager interno. Além disso, o filtro casa a **faixa de versão** da dependência com a
 > versão que o **manager anuncia** para o host em execução (**não** o runtime instalado): o manager
 > v3.x do GitExtensions 6.x anuncia `0.4.0`, então a faixa precisa **conter** 0.4.0 → `[0.4.0, 0.5.0)`,
@@ -38,10 +33,6 @@ Ambas referenciadas com `<Private>false</Private>` — **não** copiadas para o 
 > Um valor solto como `1.0.0.129` significa `>= 1.0.0.129`, que **não** inclui 0.4.0 — e o pacote
 > era **silenciosamente filtrado para fora** do Plugin Manager. Para o GitExtensions 7 (manager
 > anuncia `7.0.0`), usar `[7.0.0, 8.0.0)`.
-=======
-> no Plugin Manager interno. `1.0.0.129` é a maior versão publicada `<=` GitExtensions 6.0.5,
-> mantendo compatibilidade com a linha 6.x.
->>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 
 ## Empacotamento (nuspec)
 

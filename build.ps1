@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 <#
 .SYNOPSIS
     Compila o plugin ZimerfeldLFS, incrementa a versao (major.minor.build) e gera o .nupkg.

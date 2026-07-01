@@ -1,11 +1,11 @@
----
+﻿---
 tipo: projeto
 criado: 2026-07-01
 atualizado: 2026-07-01
 tags: [projeto, csharp, gitextensions, plugin, winforms, git-lfs, i18n]
 status: ativo
 linguagem: C#
-versao: 1.0.0
+versao: 1.0.1
 repo: C:\GitExtensions\GitExtensions.ZimerfeldLFS
 ---
 
@@ -107,7 +107,7 @@ tools\uninstall.ps1    # remove (não afeta o resto do GitExtensions)
 > O Plugin Manager do GitExtensions só extrai um grupo `lib` cujo target framework esteja na lista de monikers (inclui `any`). A DLL vai em `lib\` **raiz** (grupo "any"); uma subpasta `lib\net9.0-windows\` **não** seria extraída. Por isso o aviso **NU5101** do `nuget pack` é **filtrado de propósito** no `build.ps1`. Ver [[Versionamento]] e [[Dependências]].
 
 ## 🔢 Versionamento
-- Versão atual: **1.0.0** (csproj + nuspec sincronizados pelo `build.ps1`)
+- Versão atual: **1.0.1** (csproj + nuspec sincronizados pelo `build.ps1`)
 - Esquema: `major.minor.BUILD`, BUILD auto-incrementado a cada build
 - A cada build, o `build.ps1` carimba versão + data nos **READMEs** (seção 4b) **e** neste cofre Obsidian (seção 4c), mantendo tudo em sincronia
 

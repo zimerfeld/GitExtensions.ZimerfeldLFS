@@ -1,4 +1,4 @@
----
+﻿---
 tipo: moc
 tags: [home, moc, zimerfeld, lfs]
 atualizado: 2026-07-01
@@ -73,4 +73,4 @@ GitExtensions.ZimerfeldLFS/
 
 ## Versão Atual
 
-`1.0.0` — compilada em `net9.0-windows`, WinForms `Library`
+`1.0.1` — compilada em `net9.0-windows`, WinForms `Library`

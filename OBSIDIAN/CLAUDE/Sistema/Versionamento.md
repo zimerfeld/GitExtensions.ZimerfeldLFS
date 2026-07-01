@@ -1,4 +1,4 @@
----
+﻿---
 tipo: sistema
 tags: [build, versão, nupkg, deploy]
 atualizado: 2026-07-01
@@ -10,7 +10,7 @@ atualizado: 2026-07-01
 
 `major.minor.build` — somente o `build` é incrementado automaticamente pelo `build.ps1`. Major e minor são alterados manualmente.
 
-**Versão atual:** `1.0.0` *(fonte da verdade: `.nuspec` / `.csproj`)*
+**Versão atual:** `1.0.1` *(fonte da verdade: `.nuspec` / `.csproj`)*
 
 > [!note] Dicionários de idioma embutidos (sem satellite assemblies)
 > Os textos de UI vivem em `Resources/ZimerfeldLFS.en-US.json` e `Resources/ZimerfeldLFS.pt-BR.json`,

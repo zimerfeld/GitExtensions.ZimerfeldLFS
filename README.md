@@ -1,4 +1,4 @@
-# GitExtensions.ZimerfeldLFS
+﻿# GitExtensions.ZimerfeldLFS
 
 ![Icon](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png)
 
@@ -10,7 +10,7 @@
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Versão:** 1.0.0 — **Atualizado em:** 2026-07-01
 
-> **Versão atual: 1.0.0**
+> **Versão atual: 1.0.1**
 
 ---
 

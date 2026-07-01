@@ -1,4 +1,4 @@
----
+﻿---
 tipo: sistema
 tags: [sistema, overview, plugin, gitextensions, git-lfs, i18n]
 atualizado: 2026-07-01
@@ -20,7 +20,7 @@ Plugin para **GitExtensions** (Windows) que gerencia o **Git Large File Storage 
 | Tipo de saída | `Library` (DLL carregada pelo GitExtensions) |
 | Assembly de saída | `GitExtensions.Plugins.ZimerfeldLFS.dll` |
 | Namespace | `GitExtensions.ZimerfeldLFS` |
-| Versão atual | `1.0.0` |
+| Versão atual | `1.0.1` |
 | Idiomas | Português-BR / Inglês (auto pelo SO + override) |
 | Licença | CC BY-NC-ND 4.0 © 2026 Zimerfeld |
 | Autor | Zimerfeld |

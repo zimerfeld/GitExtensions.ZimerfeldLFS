@@ -1,10 +1,10 @@
----
+﻿---
 tipo: conhecimento
 criado: 2026-07-01
 atualizado: 2026-07-01
 tags: [conhecimento, readme, instalacao, build, uso, git-lfs, i18n]
 fonte: README.md
-versao: 1.0.0
+versao: 1.0.1
 ---
 
 # README — Instalação, Uso e Build

@@ -1,4 +1,4 @@
-#Requires -Version 5.1
+﻿#Requires -Version 5.1
 <#
 .SYNOPSIS
     Remove o plugin ZimerfeldLFS do GitExtensions sem causar danos ao programa.

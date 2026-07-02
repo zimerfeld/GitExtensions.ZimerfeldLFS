@@ -27,6 +27,8 @@ Extensão open-source do Git que troca arquivos grandes por ponteiros de texto l
 
 ## 🔢 As três etapas
 
+> **Guias técnicos de operação (novo em 2026-07-01):** o `README.md` raiz permanece como resumo bilíngue de alto nível; os detalhes de **como operar a janela** foram separados em dois manuais por idioma — `README.en-US.md` (inglês) e `README.pt-BR.md` (português) — **linkados a partir da seção "The three steps / As três etapas"** do README raiz. Cada manual cobre: anatomia da janela, escolha do diretório de trabalho, leitura do console de saída, cada botão/status por aba e solução de problemas.
+
 ### 1 · Instalação
 No Windows e macOS o Git LFS normalmente já vem incluído. Instalação manual via **Homebrew** (`brew install git-lfs`), **Chocolatey** (`choco install git-lfs`) ou binários oficiais em [git-lfs.com](https://git-lfs.com). Depois, **`git lfs install`** inicializa o LFS para a conta (1× por máquina). **Verificar instalação** roda `git lfs version`. Ver [[../Fluxos/1 - Instalação]].
 

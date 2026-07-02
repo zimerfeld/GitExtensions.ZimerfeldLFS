@@ -47,6 +47,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Expose internal test seams (injectable git runner, ParseTrackedPatterns/ParseLfsFiles) to the unit tests. -->
+    <InternalsVisibleTo Include="GitExtensions.ZimerfeldLFS.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- Plugin / window title-bar icon (4 quadrants: joystick, music note, movie play,
          database — with a lit bomb at the center), 16×16 PNG -->
     <EmbeddedResource Include="Resources\ico.png" Condition="Exists('Resources\ico.png')" />

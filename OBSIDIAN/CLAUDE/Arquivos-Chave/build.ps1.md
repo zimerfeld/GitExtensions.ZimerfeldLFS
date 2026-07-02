@@ -42,12 +42,8 @@ Compara o timestamp mais novo entre fontes (`*.cs`/`*.csproj`/`*.nuspec`/`*.json
 - `README.md`: atualiza `**Versão atual: …**` e o link do NuGet para a nova versão.
 - `README.md` / `README.pt-BR.md` / `README.en-US.md`: atualiza `**Version/Versão:**` e `**Updated/Atualizado em:**` (data de hoje).
 
-<<<<<<< HEAD
 ### 4c. Carimba o cofre Obsidian
 Carimba `versao:`/`atualizado:` do frontmatter e as variantes de `Versão atual` (negrito, tabela e rótulo+crase) nas notas que espelham a versão atual do projeto (Projeto, README espelho, Visão Geral, Versionamento, HOME). Roda **antes** do pack, então o `.nupkg` continua sendo o arquivo mais novo (a detecção de mudanças não entra em loop).
-=======
-> **Nota:** hoje o script carimba **apenas os READMEs**, não este cofre Obsidian (o irmão CommitMsg carimba ambos). Ao evoluir, incluir o cofre.
->>>>>>> d1cd405ab922f9de4a92773297bfec8df3e99866
 
 ### 5. Build
 `dotnet build $csproj -c Release --nologo -v minimal`. Conta erros/avisos por regex; falha se `buildExit != 0` ou houver erro.

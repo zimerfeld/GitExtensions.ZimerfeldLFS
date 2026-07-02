@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png)
 
-**Version:** 1.0.1 — **Updated:** 2026-07-01
+**Version:** 1.0.2 — **Updated:** 2026-07-01
 
 Plugin for [GitExtensions](https://gitextensions.github.io/) that manages **Git Large File Storage (LFS)** in a dedicated, non-modal window.
 
@@ -16,11 +16,19 @@ The window mirrors the standard Git LFS workflow as three tabs.
 
 ### 1 · Installation
 
+![ZimerfeldLFS — Installation tab](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotInstallation.png)
+
+*In the shot, Git LFS is detected as **ready** (`git-lfs/3.7.1`, initialized for this user) for the repository chosen in the **Working Directory** dropdown; the **Output** console echoes the `Check installation` run finishing with `✓ Done.`*
+
 - Windows & macOS: Git LFS is typically included out of the box. If you need to install it manually, use Homebrew (`brew install git-lfs`), Chocolatey (`choco install git-lfs`) or the official binaries from [git-lfs.com](https://git-lfs.com).
 - **Check installation** runs `git lfs version` and shows the detected status.
 - **`git lfs install`** initializes LFS for your user account (runs once per machine).
 
 ### 2 · Basic workflow — track / commit / push
+
+![ZimerfeldLFS — Basic Workflow tab](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotBasicWorkflow.png)
+
+*In the shot, two patterns are already tracked (`audios` and `library3d` folders). Type a glob and press **Track**; select a pattern and press **Untrack** to remove it. **LFS-managed files** lists what `git lfs ls-files` returns; **Commit…** / **Push…** open the native dialogs for the selected repo.*
 
 Tell Git LFS which file types to manage using glob patterns:
 
@@ -37,6 +45,10 @@ git push origin main
 - **Commit** and **Push** open the native GitExtensions dialogs for the selected repository.
 
 ### 3 · Cloning & pulling
+
+![ZimerfeldLFS — Cloning & Pulling tab](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotCloningPulling.png)
+
+*In the shot, **git lfs pull** was run and finished with `✓ Done.` in the **Output** console. Each button maps to one command, always executed against the repository in the **Working Directory** dropdown.*
 
 When collaborators or deployment tools clone the repository, Git LFS downloads the heavy files automatically as they check out the branch. To fetch or restore LFS content later:
 

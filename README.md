@@ -10,7 +10,7 @@
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Versão:** 1.0.0 — **Atualizado em:** 2026-07-01
 
-> **Versão atual: 1.0.1**
+> **Versão atual: 1.0.2**
 
 ---
 
@@ -30,11 +30,21 @@ The window mirrors the standard Git LFS workflow as three tabs / A janela espelh
 
 ### 1 · Installation / Instalação
 
+![ZimerfeldLFS — Installation tab / aba Instalação](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotInstallation.png)
+
+> ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) *In the shot, Git LFS is detected as **ready** (`git-lfs/3.7.1`, initialized for this user) for the repository chosen in the **Working Directory** dropdown; the **Output** console echoes the `Check installation` run finishing with `✓ Done.`*
+> ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) *Na imagem, o Git LFS é detectado como **pronto** (`git-lfs/3.7.1`, inicializado para este usuário) para o repositório escolhido no dropdown **Working Directory**; o console de **Output** ecoa a verificação concluída com `✓ Done.`*
+
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) On Windows & macOS, Git LFS is typically included out of the box. If you need to install it manually, use Homebrew (`brew install git-lfs`), Chocolatey (`choco install git-lfs`) or the official binaries from [git-lfs.com](https://git-lfs.com). Then initialize LFS for your user account by clicking **`git lfs install`** (runs once per machine). The **Check installation** button runs `git lfs version` and shows the detected status.
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) No Windows e no macOS, o Git LFS normalmente já vem incluído. Se precisar instalar manualmente, use o Homebrew (`brew install git-lfs`), o Chocolatey (`choco install git-lfs`) ou os binários oficiais em [git-lfs.com](https://git-lfs.com). Depois, inicialize o LFS para a sua conta clicando em **`git lfs install`** (executa uma vez por máquina). O botão **Verificar instalação** roda `git lfs version` e mostra o status detectado.
 
 ### 2 · Basic workflow — track / commit / push / Fluxo básico
+
+![ZimerfeldLFS — Basic Workflow tab / aba Fluxo Básico](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotBasicWorkflow.png)
+
+> ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) *In the shot, two patterns are already tracked (`audios` and `library3d` folders); type a glob in the box and press **Track**, select a pattern and press **Untrack** to remove it. **LFS-managed files** lists what `git lfs ls-files` returns, and **Commit…** / **Push…** open the native dialogs for the selected repo.*
+> ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) *Na imagem, dois padrões já estão rastreados (pastas `audios` e `library3d`); digite um glob na caixa e clique em **Track** (Rastrear), selecione um padrão e clique em **Untrack** para removê-lo. **LFS-managed files** lista o que o `git lfs ls-files` retorna, e **Commit…** / **Push…** abrem os diálogos nativos para o repositório selecionado.*
 
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) Tell Git LFS which file types to manage using **glob patterns** (e.g. `*.psd`, `*.mp4`, `*.zip`). Type a pattern and click **Track** — the plugin runs `git lfs track "<pattern>"` and stages the updated `.gitattributes`. The window lists the **tracked patterns** (with an *Untrack* button) and the **LFS-managed files** (`git lfs ls-files`). Then **Commit** and **Push** open the native GitExtensions dialogs for the selected repository.
 
@@ -49,6 +59,11 @@ git push origin main
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) Informe ao Git LFS quais tipos de arquivo gerenciar usando **padrões glob** (ex.: `*.psd`, `*.mp4`, `*.zip`). Digite um padrão e clique em **Rastrear** — o plugin executa `git lfs track "<padrão>"` e adiciona o `.gitattributes` ao stage. A janela lista os **padrões rastreados** (com botão *Deixar de rastrear*) e os **arquivos gerenciados pelo LFS** (`git lfs ls-files`). Em seguida, **Commit** e **Push** abrem os diálogos nativos do GitExtensions para o repositório selecionado.
 
 ### 3 · Cloning & pulling / Clone & Pull
+
+![ZimerfeldLFS — Cloning & Pulling tab / aba Clone & Pull](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotCloningPulling.png)
+
+> ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) *In the shot, **git lfs pull** was run and finished with `✓ Done.` in the **Output** console. Each button maps to one command — `git lfs pull`, `git lfs fetch --all`, `git lfs checkout`, `git lfs status` — always executed against the repository in the **Working Directory** dropdown.*
+> ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) *Na imagem, o **git lfs pull** foi executado e terminou com `✓ Done.` no console de **Output**. Cada botão corresponde a um comando — `git lfs pull`, `git lfs fetch --all`, `git lfs checkout`, `git lfs status` — sempre executado no repositório do dropdown **Working Directory**.*
 
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) When collaborators or deployment tools clone the repository, Git LFS downloads the heavy files automatically as they check out the branch. To fetch or restore LFS content later, use the buttons: `git lfs pull`, `git lfs fetch --all`, `git lfs checkout` and `git lfs status`.
 

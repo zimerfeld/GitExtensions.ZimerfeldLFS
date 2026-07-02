@@ -2,7 +2,7 @@
 
 ![Icon](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png)
 
-**Version:** 1.0.1 — **Updated:** 2026-07-01
+**Version:** 1.0.2 — **Updated:** 2026-07-01
 
 Plugin for [GitExtensions](https://gitextensions.github.io/) that manages **Git Large File Storage (LFS)** in a dedicated, non-modal window.
 

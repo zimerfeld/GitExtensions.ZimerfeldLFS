@@ -73,4 +73,4 @@ GitExtensions.ZimerfeldLFS/
 
 ## Versão Atual
 
-`1.0.1` — compilada em `net9.0-windows`, WinForms `Library`
+`1.0.2` — compilada em `net9.0-windows`, WinForms `Library`

@@ -10,7 +10,7 @@
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Versão:** 1.0.0 — **Atualizado em:** 2026-07-01
 
-> **Versão atual: 1.0.1**
+> **Versão atual: 1.0.2**
 
 ---
 

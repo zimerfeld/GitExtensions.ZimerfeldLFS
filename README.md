@@ -6,11 +6,9 @@
 
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-zimerfeld-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/zimerfeld) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E2B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/C0D621FCGD)
 
-![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **Version:** 1.0.0 — **Updated:** 2026-07-01
+![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **Version:** 1.0.2 — **Updated:** 2026-07-01
 
-![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Versão:** 1.0.0 — **Atualizado em:** 2026-07-01
-
-> **Versão atual: 1.0.2**
+![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Versão:** 1.0.2 — **Atualizado em:** 2026-07-01
 
 ---
 
@@ -27,6 +25,9 @@
 ## The three steps / As três etapas
 
 The window mirrors the standard Git LFS workflow as three tabs / A janela espelha o fluxo padrão do Git LFS em três abas:
+
+> ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **Detailed operation guide:** for a step-by-step manual on how to operate the window — window anatomy, working-directory selection, reading the output console, every button and status, plus troubleshooting — see **[README.en-US.md](README.en-US.md)**.
+> ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Guia técnico de operação:** para um manual passo a passo de como operar a janela — anatomia da janela, escolha do diretório de trabalho, leitura do console de saída, cada botão e status, além da solução de problemas — veja o **[README.pt-BR.md](README.pt-BR.md)**.
 
 ### 1 · Installation / Instalação
 

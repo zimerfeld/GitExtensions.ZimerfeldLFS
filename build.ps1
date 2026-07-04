@@ -107,7 +107,7 @@ foreach ($doc in @("$PSScriptRoot\README.md", "$PSScriptRoot\README.pt-BR.md", "
 # tabela e rotulo+crase) das notas que espelham a versao ATUAL do projeto.
 # Roda ANTES do pack, entao o .nupkg permanece o arquivo mais novo e a deteccao de
 # mudancas (secao 1b) nao dispara em loop. Uma linha de log por nota atualizada.
-$vault = "$PSScriptRoot\OBSIDIAN\CLAUDE"
+$vault = "$PSScriptRoot\OBSIDIAN"
 $obsidianDocs = @(
     "$vault\01 - Projetos\GitExtensions.ZimerfeldLFS.md",
     "$vault\02 - Conhecimento\README — Instalação, Uso e Build.md",

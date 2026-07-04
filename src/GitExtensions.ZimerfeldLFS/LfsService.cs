@@ -32,12 +32,24 @@ public sealed class LfsService
 {
     public string WorkingDir { get; set; }
 
-    public LfsService(string workingDir) => WorkingDir = workingDir ?? string.Empty;
+    // Seam: the real implementation spawns a git process; tests inject a fake runner.
+    private readonly Func<string, GitResult> _runGit;
+
+    public LfsService(string workingDir) : this(workingDir, null) { }
+
+    /// <summary>Test-only constructor: <paramref name="gitRunner"/> replaces the real git process runner.</summary>
+    internal LfsService(string workingDir, Func<string, GitResult>? gitRunner)
+    {
+        WorkingDir = workingDir ?? string.Empty;
+        _runGit = gitRunner ?? RunGitProcess;
+    }
 
     // ── Internal runner ──────────────────────────────────────────────────────
 
     /// <summary>Runs <c>git <paramref name="arguments"/></c> and captures stdout, stderr and exit code.</summary>
-    public GitResult RunGit(string arguments)
+    public GitResult RunGit(string arguments) => _runGit(arguments);
+
+    private GitResult RunGitProcess(string arguments)
     {
         try
         {
@@ -125,10 +137,14 @@ public sealed class LfsService
     public List<string> GetTrackedPatterns()
     {
         var r = RunGit("lfs track");
-        if (!r.Ok) return [];
+        return r.Ok ? ParseTrackedPatterns(r.StdOut) : [];
+    }
 
+    /// <summary>Parses the raw output of <c>git lfs track</c> into the list of tracked glob patterns.</summary>
+    internal static List<string> ParseTrackedPatterns(string stdout)
+    {
         var patterns = new List<string>();
-        foreach (var line in SplitLines(r.StdOut))
+        foreach (var line in SplitLines(stdout))
         {
             var trimmed = line.Trim();
             // Output looks like:  "Listing tracked patterns"  then  "    *.psd (.gitattributes)"
@@ -154,10 +170,13 @@ public sealed class LfsService
     public List<string> GetLfsFiles()
     {
         var r = RunGit("lfs ls-files");
-        if (!r.Ok) return [];
-        // Each line: "<oid> <*|-> <path>" — keep the whole line; it is informative as-is.
-        return SplitLines(r.StdOut).Select(l => l.TrimEnd()).Where(l => l.Length > 0).ToList();
+        return r.Ok ? ParseLfsFiles(r.StdOut) : [];
     }
+
+    /// <summary>Parses the raw output of <c>git lfs ls-files</c> into non-empty file lines.</summary>
+    // Each line: "<oid> <*|-> <path>" — keep the whole line; it is informative as-is.
+    internal static List<string> ParseLfsFiles(string stdout) =>
+        SplitLines(stdout).Select(l => l.TrimEnd()).Where(l => l.Length > 0).ToList();
 
     /// <summary>Stages the given paths (used to add <c>.gitattributes</c> after tracking).</summary>
     public GitResult Add(string pathspec) => RunGit($"add -- {pathspec}");

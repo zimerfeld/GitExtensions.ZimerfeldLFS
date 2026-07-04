@@ -16,6 +16,26 @@
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) Plugin para o [GitExtensions](https://gitextensions.github.io/) que gerencia o **Git Large File Storage (LFS)** em uma janela dedicada e não-modal. O Git LFS substitui arquivos grandes (áudio, vídeo, datasets) por ponteiros de texto leves no repositório; o conteúdo real fica em um servidor remoto separado, **acelerando o clone e evitando o inchaço do repositório**. A janela conduz o fluxo de LFS em três etapas e usa um diretório de trabalho escolhido **de forma independente do GitExtensions**.
 
+## ⚡ Executive summary / Resumo executivo
+
+![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **English**
+
+- **What it is:** a GitExtensions plugin (MEF) that surfaces **Git LFS** in a **dedicated, non-modal window**, guiding you through a **3-step flow** — *Installation* → *Track/Commit/Push* → *Clone/Pull*.
+- **Problem it solves:** Git LFS is powerful but command-line heavy and easy to misconfigure (`git lfs install`, `track`, `.gitattributes`). The plugin turns that flow into clicks, with a **visible log** of every `git`/`git lfs` command it runs.
+- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
+- **Stack:** C# / WinForms `Library`, target **net9.0-windows**, packaged as a **nupkg**; build & versioning automated via `build.ps1`.
+- **Current state:** version **`1.0.2`** — functional, with **36 unit tests (xUnit)** covering `LfsService`.
+- **Target audience:** developers and teams versioning large assets (games, media, ML datasets) already using GitExtensions on Windows.
+
+![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Português**
+
+- **O que é:** plugin (MEF) para o GitExtensions que expõe o **Git LFS** numa **janela dedicada e não-modal**, guiando por um **fluxo de 3 etapas** — *Instalação* → *Track/Commit/Push* → *Clone/Pull*.
+- **Problema que resolve:** o Git LFS é poderoso, mas dependente de linha de comando e propenso a erros de configuração (`git lfs install`, `track`, `.gitattributes`). O plugin transforma esse fluxo em cliques, com **log visível** de cada comando `git`/`git lfs` executado.
+- **Diferenciais:** janela persistente (não interrompe o trabalho no host); **diretório de trabalho independente** do repositório ativo do GitExtensions; **i18n** (Automático / EN-US / PT-BR); ícone próprio; banner de patrocínio (GitHub Sponsors + Ko-fi).
+- **Stack:** C# / WinForms `Library`, alvo **net9.0-windows**, empacotado como **nupkg**; build e versionamento automatizados via `build.ps1`.
+- **Estado atual:** versão **`1.0.2`** — funcional, com **36 testes unitários (xUnit)** cobrindo o `LfsService`.
+- **Público-alvo:** desenvolvedores e times que versionam ativos grandes (jogos, mídia, datasets de ML) e já usam o GitExtensions no Windows.
+
 ## What is Git LFS? / O que é o Git LFS?
 
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) Git Large File Storage (LFS) is an open-source extension for Git that replaces large files (like audio, video, or datasets) with lightweight text pointers inside your repository. The actual file content is hosted on a separate remote server, speeding up cloning and preventing repository bloat.

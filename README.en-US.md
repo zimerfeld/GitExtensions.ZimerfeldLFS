@@ -9,6 +9,17 @@
 
 ---
 
+## ⚡ Executive summary
+
+- **What it is:** a GitExtensions plugin (MEF) that surfaces **Git LFS** in a **dedicated, non-modal window**, guiding you through a **3-step flow** — *Installation* → *Track/Commit/Push* → *Clone/Pull*.
+- **Problem it solves:** Git LFS is powerful but command-line heavy and easy to misconfigure (`git lfs install`, `track`, `.gitattributes`). The plugin turns that flow into clicks, with a **visible log** of every `git`/`git lfs` command it runs.
+- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
+- **Stack:** C# / WinForms `Library`, target **net9.0-windows**, packaged as a **nupkg**; build & versioning automated via `build.ps1`.
+- **Current state:** version **`1.0.2`** — functional, with **36 unit tests (xUnit)** covering `LfsService`.
+- **Target audience:** developers and teams versioning large assets (games, media, ML datasets) already using GitExtensions on Windows.
+
+---
+
 ## Window anatomy
 
 When you open **Plugins → ZimerfeldLFS**, a non-modal, fixed-size window (720 px wide) appears with the following regions, top to bottom:

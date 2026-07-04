@@ -109,11 +109,18 @@ foreach ($doc in @("$PSScriptRoot\README.md", "$PSScriptRoot\README.pt-BR.md", "
 # mudancas (secao 1b) nao dispara em loop. Uma linha de log por nota atualizada.
 $vault = "$PSScriptRoot\OBSIDIAN"
 $obsidianDocs = @(
-    "$vault\01 - Projetos\GitExtensions.ZimerfeldLFS.md",
-    "$vault\02 - Conhecimento\README — Instalação, Uso e Build.md",
-    "$vault\Sistema\Visão Geral.md",
-    "$vault\Sistema\Versionamento.md",
-    "$vault\HOME.md"
+    "$vault\💼 Negócio\📦 GitExtensions.ZimerfeldLFS.md",
+    "$vault\💼 Negócio\📦 GitExtensions.ZimerfeldLFS (EN).md",
+    "$vault\📚 Conhecimento\📖 README — Instalação, Uso e Build.md",
+    "$vault\📚 Conhecimento\📖 README — Instalação, Uso e Build (EN).md",
+    "$vault\🧩 Sistemas\🔭 Visão Geral.md",
+    "$vault\🧩 Sistemas\🔭 Visão Geral (EN).md",
+    "$vault\🧩 Sistemas\🔢 Versionamento.md",
+    "$vault\🧩 Sistemas\🔢 Versionamento (EN).md",
+    "$vault\🏠 Home.md",
+    "$vault\🏠 Home (EN).md",
+    "$vault\📌 Backlog.md",
+    "$vault\📌 Backlog (EN).md"
 )
 foreach ($obsDoc in $obsidianDocs) {
     if (Test-Path $obsDoc) {
@@ -126,8 +133,10 @@ foreach ($obsDoc in $obsidianDocs) {
         # "| Versao atual | `X` |" (tabela)  e  "**Versao atual:** `X`" (rotulo+crase)
         $v = $v -replace '(\|\s*Versão atual\s*\|\s*`)[\d\.]+(`)',   ('${1}' + $newVersion + '${2}')
         $v = $v -replace '(\*\*Versão atual:\*\*\s*`)[\d\.]+(`)',    ('${1}' + $newVersion + '${2}')
-        # HOME.md: linha "`X` — compilada ..." (comeca com a versao entre crases)
-        $v = $v -replace '(?m)^`[\d\.]+`(\s+—\s+compilada)',        ('`' + $newVersion + '`' + '${1}')
+        # Home / Backlog / EN: "versao **`X`**" / "version **`X`**" (negrito + crase)
+        $v = $v -replace '(?i)(vers(?:ão|ion)\s+\*\*`?)[\d\.]+(`?\*\*)', ('${1}' + $newVersion + '${2}')
+        # Versionamento EN: "current version: **`X`**"
+        $v = $v -replace '(?i)(current version:\s+\*\*`?)[\d\.]+(`?\*\*)', ('${1}' + $newVersion + '${2}')
         [System.IO.File]::WriteAllText($obsDoc, $v, [System.Text.Encoding]::UTF8)
         Write-Host "Obsidian: $([System.IO.Path]::GetFileName($obsDoc)) atualizado para $newVersion ($today)"
     }

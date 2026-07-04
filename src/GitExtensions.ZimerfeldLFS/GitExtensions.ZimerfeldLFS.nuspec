@@ -16,7 +16,7 @@
   <metadata>
     <!-- ── Identity ───────────────────────────────────────────────────── -->
     <id>GitExtensions.ZimerfeldLFS</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <title>ZimerfeldLFS — Git Large File Storage for GitExtensions</title>
     <authors>Zimerfeld</authors>
     <owners>Zimerfeld</owners>

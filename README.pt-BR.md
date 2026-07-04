@@ -1,8 +1,8 @@
-# GitExtensions.ZimerfeldLFS — Guia Técnico de Operação (Português)
+﻿# GitExtensions.ZimerfeldLFS — Guia Técnico de Operação (Português)
 
 ![Ícone](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png)
 
-**Versão:** 1.0.2 — **Atualizado em:** 2026-07-01
+**Versão:** 1.0.3 — **Atualizado em:** 2026-07-04
 
 > Este documento é o manual detalhado, passo a passo, de **como operar** a janela do plugin.
 > Para uma visão de alto nível veja o [README principal](README.md) · Versão em inglês: [README.en-US.md](README.en-US.md).
@@ -169,6 +169,13 @@ Uma sequência típica de restauração após um clone que pulou os objetos LFS:
 | **Branch** exibe *não é um repositório git* | O dropdown aponta para uma pasta que não é uma árvore de trabalho git. |
 | Commit informa *indisponível* | O diálogo nativo de commit do GitExtensions não pôde ser hospedado; faça o commit pela janela principal do GitExtensions. |
 | Comando mostra `✗ Failed (exit code N)` | Leia a saída bruta acima da linha de falha — é o erro literal do `git`/`git lfs`. |
+
+## Plugins integrados
+
+Outros plugins do GitExtensions do mesmo autor que combinam bem com o ZimerfeldLFS:
+
+- **[GitExtensions.ZimerfeldTree](https://github.com/zimerfeld/GitExtensions.ZimerfeldTree)**
+- **[GitExtensions.ZimerfeldCommitMsg](https://github.com/zimerfeld/GitExtensions.ZimerfeldCommitMsg)**
 
 ## Licença
 

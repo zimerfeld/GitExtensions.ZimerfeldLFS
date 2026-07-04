@@ -7,7 +7,7 @@ criado: 2026-07-01
 tags: [projeto, negocio, csharp, gitextensions, plugin, winforms, git-lfs, i18n]
 status: ativo
 linguagem: C#
-versao: 1.0.3
+versao: 1.0.4
 repo: C:\GitExtensions\GitExtensions.ZimerfeldLFS
 ---
 
@@ -111,7 +111,7 @@ Area split into **4 equal quadrants**, each a "file card" of a large-file type: 
 > The GitExtensions Plugin Manager only extracts a `lib` group whose target framework is in the moniker list (which includes `any`). The DLL goes in the **root** `lib\` (the "any" group); a `lib\net9.0-windows\` subfolder would **not** be extracted. That is why the `nuget pack` **NU5101** warning is **filtered on purpose** in `build.ps1`. See [[🔢 Versionamento (EN)|🔢 Versioning]] and [[🧱 Dependências (EN)|🧱 Dependencies]].
 
 ## 🔢 Versioning
-- Current version: **1.0.3** (csproj + nuspec synchronized by `build.ps1`)
+- Current version: **1.0.4** (csproj + nuspec synchronized by `build.ps1`)
 - Scheme: `major.minor.BUILD`, BUILD auto-incremented on every build
 - On every build, `build.ps1` stamps version + date into the **READMEs** (section 4b) **and** into this Obsidian vault (section 4c), keeping everything in sync
 

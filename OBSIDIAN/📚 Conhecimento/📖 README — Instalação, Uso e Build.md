@@ -6,7 +6,7 @@ atualizado: 2026-07-04
 criado: 2026-07-01
 tags: [conhecimento, readme, instalacao, build, uso, git-lfs, i18n]
 fonte: README.md
-versao: 1.0.3
+versao: 1.0.4
 ---
 
 # 📖 README — Instalação, Uso e Build

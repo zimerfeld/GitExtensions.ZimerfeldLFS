@@ -2,7 +2,7 @@
 
 ![Ícone](https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png)
 
-**Versão:** 1.0.3 — **Atualizado em:** 2026-07-04
+**Versão:** 1.0.4 — **Atualizado em:** 2026-07-04
 
 > Este documento é o manual detalhado, passo a passo, de **como operar** a janela do plugin.
 > Para uma visão de alto nível veja o [README principal](README.md) · Versão em inglês: [README.en-US.md](README.en-US.md).

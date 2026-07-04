@@ -20,7 +20,7 @@ tags: [home, moc, zimerfeld, lfs]
 - **Problema que resolve:** o Git LFS é poderoso mas dependente de linha de comando e propenso a erros (`git lfs install`, `track`, `.gitattributes`). O plugin transforma esse fluxo em cliques, com **log visível** de cada comando executado.
 - **Diferenciais:** janela **persistente** (não interrompe o host); **diretório de trabalho independente** do repositório ativo; **i18n** (Automático / EN-US / PT-BR); ícone próprio (4 quadrantes + bomba); banner de patrocínio (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, alvo **net9.0-windows**, empacotado como **nupkg**; build e versionamento via `build.ps1`.
-- **Estado atual:** versão **`1.0.3`** — funcional, com **36 testes unitários (xUnit)** cobrindo o `LfsService`.
+- **Estado atual:** versão **`1.0.4`** — funcional, com **36 testes unitários (xUnit)** cobrindo o `LfsService`.
 - **Público-alvo:** desenvolvedores e times que versionam ativos grandes (jogos, mídia, datasets de ML) e usam GitExtensions no Windows.
 - **Ângulo de negócio:** produto **open source** sob o owner `zimerfeld`, reforçando autoridade técnica e servindo de vitrine para adoção e patrocínio.
 

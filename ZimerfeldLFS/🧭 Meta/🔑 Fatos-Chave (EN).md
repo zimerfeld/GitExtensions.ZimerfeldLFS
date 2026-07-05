@@ -21,7 +21,7 @@ tags: [meta, fatos-chave, referencia]
 - See [[👤 Renato (EN)|👤 Renato]] for detailed preferences
 
 ## 📁 Important paths
-- Memory vault (this one): `C:\GitExtensions\GitExtensions.ZimerfeldLFS\OBSIDIAN`
+- Memory vault (this one): `C:\GitExtensions\GitExtensions.ZimerfeldLFS\ZimerfeldLFS`
 - Project root: `C:\GitExtensions\GitExtensions.ZimerfeldLFS`
 - `C:\GitExtensions\GitExtensions.ZimerfeldLFS` **is** the repository of the project [[📦 GitExtensions.ZimerfeldLFS (EN)|📦 GitExtensions.ZimerfeldLFS]] (C#, GitExtensions plugin for Git LFS)
 - GitExtensions installed at: `C:\Program Files\GitExtensions\`

@@ -21,7 +21,7 @@ tags: [meta, fatos-chave, referencia]
 - Ver [[👤 Renato]] para preferências detalhadas
 
 ## 📁 Caminhos importantes
-- Cofre de memória (este): `C:\GitExtensions\GitExtensions.ZimerfeldLFS\OBSIDIAN`
+- Cofre de memória (este): `C:\GitExtensions\GitExtensions.ZimerfeldLFS\ZimerfeldLFS`
 - Raiz do projeto: `C:\GitExtensions\GitExtensions.ZimerfeldLFS`
 - `C:\GitExtensions\GitExtensions.ZimerfeldLFS` **é** o repositório do projeto [[📦 GitExtensions.ZimerfeldLFS]] (C#, plugin GitExtensions para Git LFS)
 - GitExtensions instalado em: `C:\Program Files\GitExtensions\`

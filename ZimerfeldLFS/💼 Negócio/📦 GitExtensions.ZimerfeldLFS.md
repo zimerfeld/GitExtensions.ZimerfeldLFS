@@ -40,7 +40,7 @@ C:\GitExtensions\GitExtensions.ZimerfeldLFS\
 ├─ tools\                                # install/uninstall .ps1, nuget.exe, icon-generator
 │   ├─ icon-generator\Generate-LfsIcon.ps1  # gerador GDI+ do ícone
 │   └─ net9.0-windows\                   # saída do build (DLL) usada pelo nupkg
-├─ OBSIDIAN\                             # 🧠 este cofre de memória
+├─ ZimerfeldLFS\                         # 🧠 este cofre de memória
 ├─ build.ps1                             # incrementa versão + build + deploy + nupkg
 ├─ README.md / README.pt-BR.md / README.en-US.md  # espelhado em [[📖 README — Instalação, Uso e Build]]
 └─ GitExtensions.ZimerfeldLFS.X.Y.Z.nupkg

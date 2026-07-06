@@ -22,6 +22,8 @@ Plugin para **[GitExtensions](https://gitextensions.github.io/)** que gerencia o
 Canais de doação configurados (badges no topo do README + **banner clicável no topo da janela**, ver [[🪟 LfsForm]] / `SponsorBanner.cs`):
 - **GitHub Sponsors:** `@zimerfeld` → https://github.com/sponsors/zimerfeld
 - **Ko-fi:** `C0D621FCGD` → https://ko-fi.com/C0D621FCGD
+- **Botão nativo "Sponsor this project" no GitHub:** ativado por `.github/FUNDING.yml` (`github: zimerfeld` + `ko_fi: C0D621FCGD`) — mesmo padrão do `GitExtensions.ZimerfeldCommitMsg`. Exibe o botão no topo da página do repositório.
+- **Badges de patrocínio em todos os READMEs:** frase-convite bilíngue + badges GitHub Sponsor/Ko-fi presentes em `README.md`, `README.en-US.md` e `README.pt-BR.md`.
 - **Prova social no README:** badges de versão e **downloads do NuGet** (`shields.io/nuget/v` e `/dt`).
 
 ## 📂 Estrutura do repositório

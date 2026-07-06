@@ -4,6 +4,10 @@
 
 [![NuGet version](https://img.shields.io/nuget/v/GitExtensions.ZimerfeldLFS?style=for-the-badge&logo=nuget&label=NuGet)](https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/) &nbsp; [![NuGet downloads](https://img.shields.io/nuget/dt/GitExtensions.ZimerfeldLFS?style=for-the-badge&logo=nuget&label=Downloads)](https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/)
 
+![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) This plugin is built and maintained in my free time. If it saves you time managing Git LFS, a sponsorship helps keep it updated for new GitExtensions versions. 💜
+
+![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) Este plugin é construído e mantido no meu tempo livre. Se ele te poupa tempo gerenciando o Git LFS, um patrocínio ajuda a mantê-lo atualizado para as novas versões do GitExtensions. 💜
+
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-zimerfeld-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/zimerfeld) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E2B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/C0D621FCGD)
 
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **Version:** 1.0.2 — **Updated:** 2026-07-04
@@ -15,6 +19,15 @@
 ![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) Plugin for [GitExtensions](https://gitextensions.github.io/) that manages **Git Large File Storage (LFS)** in a dedicated, non-modal window. Git LFS replaces large files (audio, video, datasets) with lightweight text pointers inside your repository; the real content lives on a separate remote server, **speeding up cloning and preventing repository bloat**. The window walks you through the LFS workflow in three steps and targets a working directory chosen **independently of the GitExtensions host**.
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) Plugin para o [GitExtensions](https://gitextensions.github.io/) que gerencia o **Git Large File Storage (LFS)** em uma janela dedicada e não-modal. O Git LFS substitui arquivos grandes (áudio, vídeo, datasets) por ponteiros de texto leves no repositório; o conteúdo real fica em um servidor remoto separado, **acelerando o clone e evitando o inchaço do repositório**. A janela conduz o fluxo de LFS em três etapas e usa um diretório de trabalho escolhido **de forma independente do GitExtensions**.
+
+## Languages / Idiomas
+
+![EN](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotGB.png) **Technical details, features, screenshots and installation** are available in the language-specific versions. **Click here:**
+
+![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Detalhes técnicos, funcionalidades, printscreens e instalação** encontram-se disponíveis nas versões por idioma. **Clique aqui:**
+
+- [English (United States)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.en-US.md)
+- [Português (Brasil)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.pt-BR.md)
 
 ## ⚡ Executive summary / Resumo executivo
 
@@ -141,4 +154,4 @@ pwsh .\build.ps1 -Force   # always rebuild/pack
 
 ## License / Licença
 
-Copyright © 2026 Zimerfeld — **CC BY-NC-ND 4.0** (see `LICENSE.txt`).
+Copyright © 2026 Renato Zimerfeld — **CC BY-NC-ND 4.0** (see / veja [`LICENSE.txt`](LICENSE.txt)).

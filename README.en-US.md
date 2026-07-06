@@ -4,6 +4,10 @@
 
 **Version:** 1.0.4 — **Updated:** 2026-07-04
 
+This plugin is built and maintained in my free time. If it saves you time managing Git LFS, a sponsorship helps keep it updated for new GitExtensions versions. 💜
+
+[![GitHub Sponsor](https://img.shields.io/badge/Sponsor-zimerfeld-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/zimerfeld) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E2B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/C0D621FCGD)
+
 > This document is the detailed, step-by-step manual for **operating** the plugin window.
 > For a high-level overview see the [main README](README.md) · Portuguese version: [README.pt-BR.md](README.pt-BR.md).
 
@@ -179,4 +183,4 @@ Other GitExtensions plugins from the same author that pair well with ZimerfeldLF
 
 ## License
 
-Copyright © 2026 Zimerfeld — **CC BY-NC-ND 4.0** (see `LICENSE.txt`).
+Copyright © 2026 Renato Zimerfeld — **CC BY-NC-ND 4.0** (see [`LICENSE.txt`](LICENSE.txt)).

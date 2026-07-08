@@ -13,8 +13,6 @@ repo: C:\GitExtensions\GitExtensions.ZimerfeldLFS
 
 # 📦 GitExtensions.ZimerfeldLFS
 
-> 🇧🇷 Leia esta página em português → [[📦 GitExtensions.ZimerfeldLFS]]
-
 ## 🎯 Goal
 Plugin for **[GitExtensions](https://gitextensions.github.io/)** that manages **Git Large File Storage (LFS)** in a **dedicated, non-modal window**. Git LFS replaces large files (audio, video, datasets) with **lightweight text pointers** inside the repository; the real content lives on a separate remote server — **speeding up cloning and avoiding repository bloat**. The window walks the user through the standard LFS flow in **three steps** (tabs) and points to a **working directory chosen independently of GitExtensions**. See [[🗃️ Git LFS - Conceitos (EN)|🗃️ Git LFS — Concepts]].
 

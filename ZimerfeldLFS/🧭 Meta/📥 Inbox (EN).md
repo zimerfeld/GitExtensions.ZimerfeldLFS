@@ -9,8 +9,6 @@ tags: [meta, inbox, captura-rapida]
 
 # 📥 Inbox
 
-> 🇧🇷 Leia esta página em português → [[📥 Inbox]]
-
 > [!note] Quick capture
 > Loose notes not yet organized into the right folders. Process periodically by moving the content to the appropriate areas and empty this list.
 

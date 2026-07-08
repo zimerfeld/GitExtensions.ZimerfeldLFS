@@ -9,8 +9,6 @@ tags: [meta, fatos-chave, referencia]
 
 # 🔑 Key Facts
 
-> 🇧🇷 Leia esta página em português → [[🔑 Fatos-Chave]]
-
 > [!tip] Read first
 > Stable, always-useful truths. Update whenever something changes.
 

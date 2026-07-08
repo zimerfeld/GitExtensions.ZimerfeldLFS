@@ -8,8 +8,6 @@ tags: [home, moc, zimerfeld, lfs]
 
 # 🏠 GitExtensions.ZimerfeldLFS — Neuron Vault
 
-> 🇧🇷 Leia esta página em português → [[🏠 Home]]
-
 ![[icon-128.png]]
 
 > [!abstract] 🧠 What this vault is

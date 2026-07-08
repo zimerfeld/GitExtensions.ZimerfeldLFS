@@ -9,8 +9,6 @@ tags: [meta, protocolo]
 
 # 🧭 How to use this vault (Claude's protocol)
 
-> 🇧🇷 Leia esta página em português → [[🧭 Como usar este cofre]]
-
 > [!important] Memory protocol
 > At the **start** of each session, read: [[🏠 Home (EN)|🏠 Home]] (priority map), [[📌 Backlog (EN)|📌 Backlog]] (resume point), [[🔑 Fatos-Chave (EN)|🔑 Key Facts]] and the mother note [[📦 GitExtensions.ZimerfeldLFS (EN)|📦 GitExtensions.ZimerfeldLFS]].
 > At the **end** of each session, update [[📌 Backlog (EN)|📌 Backlog]] and the affected notes (content + frontmatter `atualizado:`).

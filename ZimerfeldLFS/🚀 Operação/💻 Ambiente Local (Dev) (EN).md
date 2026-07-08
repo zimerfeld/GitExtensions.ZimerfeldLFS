@@ -8,8 +8,6 @@ tags: [operacao, runbook, dev, build, gitextensions, powershell]
 
 # 💻 Local Environment (Dev)
 
-> 🇧🇷 Leia esta página em português → [[💻 Ambiente Local (Dev)]]
-
 How to build the plugin, install it into the local GitExtensions and iterate during development.
 
 ## ⚡ TL;DR — the single command

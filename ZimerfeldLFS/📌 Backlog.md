@@ -8,8 +8,6 @@ tags: [backlog, retomada, roadmap]
 
 # 📌 Backlog
 
-> 🇺🇸 Read this page in English → [[📌 Backlog (EN)]]
-
 > [!tip] Comece por aqui ao retomar
 > Ponto de retomada do projeto **ZimerfeldLFS** em outra sessão. Leia também [[🏠 Home]] e a nota-mãe [[📦 GitExtensions.ZimerfeldLFS]].
 

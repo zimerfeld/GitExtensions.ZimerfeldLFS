@@ -8,8 +8,6 @@ tags: [home, moc, zimerfeld, lfs]
 
 # 🏠 GitExtensions.ZimerfeldLFS — Cofre de Neurônios
 
-> 🇺🇸 Read this page in English → [[🏠 Home (EN)]]
-
 ![[icon-128.png]]
 
 > [!abstract] 🧠 O que é este cofre

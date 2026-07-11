@@ -28,6 +28,7 @@
 
 - [English (United States)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.en-US.md)
 - [Português (Brasil)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.pt-BR.md)
+- [Español (España)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.es-ES.md)
 
 ## ⚡ Executive summary / Resumo executivo
 
@@ -35,7 +36,7 @@
 
 - **What it is:** a GitExtensions plugin (MEF) that surfaces **Git LFS** in a **dedicated, non-modal window**, guiding you through a **3-step flow** — *Installation* → *Track/Commit/Push* → *Clone/Pull*.
 - **Problem it solves:** Git LFS is powerful but command-line heavy and easy to misconfigure (`git lfs install`, `track`, `.gitattributes`). The plugin turns that flow into clicks, with a **visible log** of every `git`/`git lfs` command it runs.
-- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
+- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR / ES-ES); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, target **net9.0-windows**, packaged as a **nupkg**; build & versioning automated via `build.ps1`.
 - **Current state:** version **`1.0.2`** — functional, with **36 unit tests (xUnit)** covering `LfsService`.
 - **Target audience:** developers and teams versioning large assets (games, media, ML datasets) already using GitExtensions on Windows.
@@ -44,7 +45,7 @@
 
 - **O que é:** plugin (MEF) para o GitExtensions que expõe o **Git LFS** numa **janela dedicada e não-modal**, guiando por um **fluxo de 3 etapas** — *Instalação* → *Track/Commit/Push* → *Clone/Pull*.
 - **Problema que resolve:** o Git LFS é poderoso, mas dependente de linha de comando e propenso a erros de configuração (`git lfs install`, `track`, `.gitattributes`). O plugin transforma esse fluxo em cliques, com **log visível** de cada comando `git`/`git lfs` executado.
-- **Diferenciais:** janela persistente (não interrompe o trabalho no host); **diretório de trabalho independente** do repositório ativo do GitExtensions; **i18n** (Automático / EN-US / PT-BR); ícone próprio; banner de patrocínio (GitHub Sponsors + Ko-fi).
+- **Diferenciais:** janela persistente (não interrompe o trabalho no host); **diretório de trabalho independente** do repositório ativo do GitExtensions; **i18n** (Automático / EN-US / PT-BR / ES-ES); ícone próprio; banner de patrocínio (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, alvo **net9.0-windows**, empacotado como **nupkg**; build e versionamento automatizados via `build.ps1`.
 - **Estado atual:** versão **`1.0.2`** — funcional, com **36 testes unitários (xUnit)** cobrindo o `LfsService`.
 - **Público-alvo:** desenvolvedores e times que versionam ativos grandes (jogos, mídia, datasets de ML) e já usam o GitExtensions no Windows.
@@ -111,7 +112,7 @@ git push origin main
 - **Three-step guided workflow** — Installation, Basic workflow (track/commit/push) and Cloning & pulling, each as its own tab.
 - **Live LFS state** — detected `git lfs` version, whether it is initialized for your user, the tracked glob patterns and the LFS-managed files, refreshed automatically.
 - **Output console** — every button shows the exact `git`/`git lfs` command and its output, so nothing is hidden.
-- **Localized (English / Portuguese)** with an automatic mode following the OS, plus a **Show Debug** toggle that reveals control IDs.
+- **Localized (English / Portuguese / Spanish)** with an automatic mode following the OS, plus a **Show Debug** toggle that reveals control IDs.
 
 **![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) Português**
 
@@ -119,7 +120,7 @@ git push origin main
 - **Fluxo guiado em três etapas** — Instalação, Fluxo básico (track/commit/push) e Clone & Pull, cada um em sua aba.
 - **Estado do LFS ao vivo** — versão do `git lfs` detectada, se está inicializado para o usuário, os padrões glob rastreados e os arquivos gerenciados pelo LFS, atualizados automaticamente.
 - **Console de saída** — cada botão mostra o comando `git`/`git lfs` exato e sua saída, sem esconder nada.
-- **Localizado (Inglês / Português)** com modo automático seguindo o SO, além do **Mostrar Debug** que revela os IDs dos controles.
+- **Localizado (Inglês / Português / Espanhol)** com modo automático seguindo o SO, além do **Mostrar Debug** que revela os IDs dos controles.
 
 ## Installation / Instalação
 

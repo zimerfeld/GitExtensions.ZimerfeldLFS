@@ -15,9 +15,9 @@ tags: [build, versão, nupkg, deploy]
 **Current version:** `1.0.2` *(source of truth: `.nuspec` / `.csproj`)*
 
 > [!note] Embedded language dictionaries (no satellite assemblies)
-> The UI strings live in `Resources/ZimerfeldLFS.en-US.json` and `Resources/ZimerfeldLFS.pt-BR.json`,
+> The UI strings live in `Resources/ZimerfeldLFS.en-US.json`, `Resources/ZimerfeldLFS.pt-BR.json` and `Resources/ZimerfeldLFS.es-ES.json`,
 > embedded in the **main assembly** with `WithCulture="false"` + explicit `LogicalName` — so
-> MSBuild does **not** interpret the `.en-US`/`.pt-BR` infix as a culture (which would divert them
+> MSBuild does **not** interpret the `.en-US`/`.pt-BR`/`.es-ES` infix as a culture (which would divert them
 > to satellite assemblies), preserving the **single-DLL** deployment. Read at runtime by `I18n`.
 
 ## 🔄 build.ps1 cycle
@@ -32,7 +32,7 @@ build.ps1  [-Force]
   ├─ 2c. Closes GitExtensions if it is running
   ├─ 3. Bumps the .nuspec  ← <version>
   ├─ 4. Bumps the .csproj  ← <Version>
-  ├─ 4b. Stamps version + date at the top of the READMEs (README.md / .pt-BR / .en-US)
+  ├─ 4b. Stamps version + date at the top of the READMEs (README.md / .pt-BR / .en-US / .es-ES)
   ├─ 4c. Stamps version + date in this Obsidian vault (notes that mirror the version)
   ├─ 5. dotnet build -c Release
   ├─ 6. Copies DLL → C:\Program Files\GitExtensions\Plugins\  (requires Admin)
@@ -56,7 +56,7 @@ build.ps1  [-Force]
 |---|---|
 | `GitExtensions.ZimerfeldLFS.nuspec` | `<version>` |
 | `GitExtensions.ZimerfeldLFS.csproj` | `<Version>` (and `**Versão atual**` + NuGet link in README.md) |
-| `README.md` / `README.pt-BR.md` / `README.en-US.md` | `**Version/Versão:**` and `**Updated/Atualizado em:**` |
+| `README.md` / `README.pt-BR.md` / `README.en-US.md` / `README.es-ES.md` | `**Version/Versão:**` and `**Updated/Atualizado em:**` |
 
 > **Note:** `build.ps1` stamps version/date in the **READMEs** (section 4b) **and** in this Obsidian vault (section 4c) — the notes that mirror the current version (Project, README mirror, Overview, Versioning, HOME) stay automatically in sync, just like the CommitMsg sibling.
 

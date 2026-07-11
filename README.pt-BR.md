@@ -9,7 +9,7 @@ Este plugin é construído e mantido no meu tempo livre. Se ele te poupa tempo g
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-zimerfeld-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/zimerfeld) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E2B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/C0D621FCGD)
 
 > Este documento é o manual detalhado, passo a passo, de **como operar** a janela do plugin.
-> Para uma visão de alto nível veja o [README principal](README.md) · Versão em inglês: [README.en-US.md](README.en-US.md).
+> Para uma visão de alto nível veja o [README principal](README.md) · Versão em inglês: [README.en-US.md](README.en-US.md) · Versão em espanhol: [README.es-ES.md](README.es-ES.md).
 
 ---
 
@@ -17,7 +17,7 @@ Este plugin é construído e mantido no meu tempo livre. Se ele te poupa tempo g
 
 - **O que é:** plugin (MEF) para o GitExtensions que expõe o **Git LFS** numa **janela dedicada e não-modal**, guiando por um **fluxo de 3 etapas** — *Instalação* → *Track/Commit/Push* → *Clone/Pull*.
 - **Problema que resolve:** o Git LFS é poderoso, mas dependente de linha de comando e propenso a erros de configuração (`git lfs install`, `track`, `.gitattributes`). O plugin transforma esse fluxo em cliques, com **log visível** de cada comando `git`/`git lfs` executado.
-- **Diferenciais:** janela persistente (não interrompe o trabalho no host); **diretório de trabalho independente** do repositório ativo do GitExtensions; **i18n** (Automático / EN-US / PT-BR); ícone próprio; banner de patrocínio (GitHub Sponsors + Ko-fi).
+- **Diferenciais:** janela persistente (não interrompe o trabalho no host); **diretório de trabalho independente** do repositório ativo do GitExtensions; **i18n** (Automático / EN-US / PT-BR / ES-ES); ícone próprio; banner de patrocínio (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, alvo **net9.0-windows**, empacotado como **nupkg**; build e versionamento automatizados via `build.ps1`.
 - **Estado atual:** versão **`1.0.2`** — funcional, com **36 testes unitários (xUnit)** cobrindo o `LfsService`.
 - **Público-alvo:** desenvolvedores e times que versionam ativos grandes (jogos, mídia, datasets de ML) e já usam o GitExtensions no Windows.
@@ -161,7 +161,7 @@ Uma sequência típica de restauração após um clone que pulou os objetos LFS:
 ## Barra inferior
 
 - **Mostrar Debug** — revela o `Name` interno de cada controle como tooltip (auxílio de diagnóstico); a escolha é persistida em `ZimerfeldLFS.uisettings.json`.
-- **Idioma** — *Automático* (segue o SO), *Inglês* ou *Português*. Trocar re-rotula toda a janela imediatamente.
+- **Idioma** — *Automático* (segue o SO), *Inglês*, *Português* ou *Espanhol*. Trocar re-rotula toda a janela imediatamente.
 - **Fechar** — fecha a janela (também é a ação <kbd>Esc</kbd> / Cancelar). A janela é não-modal, então o GitExtensions continua utilizável enquanto ela está aberta.
 
 ## Solução de problemas

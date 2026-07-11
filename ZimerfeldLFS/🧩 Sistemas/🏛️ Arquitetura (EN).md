@@ -52,7 +52,7 @@ The only touchpoint with the host is optional: the `openCommit`/`openPush` deleg
 
 ## 🌐 Localization (i18n)
 
-`I18n` (static) resolves the language (`Automatic` follows the OS via `CultureInfo.CurrentUICulture`; otherwise `en-US`/`pt-BR`) and loads the dictionary from the **embedded JSON** `Resources\ZimerfeldLFS.<culture>.json` via `GetManifestResourceStream`, with en-US fallback → empty map. A `Translator` returns the string by key (or the key itself if missing) and has `F(key, args)` for `string.Format`. The choice is read from disk **once** at start and afterwards driven in memory by the dropdown; persisted at `%APPDATA%\GitExtensions\ZimerfeldLFS.language.json`. See [[🪟 LfsForm (EN)|🪟 LfsForm]] and `Localization.cs`.
+`I18n` (static) resolves the language (`Automatic` follows the OS via `CultureInfo.CurrentUICulture`; otherwise `en-US`/`pt-BR`/`es-ES`) and loads the dictionary from the **embedded JSON** `Resources\ZimerfeldLFS.<culture>.json` via `GetManifestResourceStream`, with en-US fallback → empty map. A `Translator` returns the string by key (or the key itself if missing) and has `F(key, args)` for `string.Format`. The choice is read from disk **once** at start and afterwards driven in memory by the dropdown; persisted at `%APPDATA%\GitExtensions\ZimerfeldLFS.language.json`. See [[🪟 LfsForm (EN)|🪟 LfsForm]] and `Localization.cs`.
 
 ## 🧵 Threading
 

@@ -15,9 +15,9 @@ tags: [build, versão, nupkg, deploy]
 **Versão atual:** `1.0.4` *(fonte da verdade: `.nuspec` / `.csproj`)*
 
 > [!note] Dicionários de idioma embutidos (sem satellite assemblies)
-> Os textos de UI vivem em `Resources/ZimerfeldLFS.en-US.json` e `Resources/ZimerfeldLFS.pt-BR.json`,
+> Os textos de UI vivem em `Resources/ZimerfeldLFS.en-US.json`, `Resources/ZimerfeldLFS.pt-BR.json` e `Resources/ZimerfeldLFS.es-ES.json`,
 > embutidos no **assembly principal** com `WithCulture="false"` + `LogicalName` explícito — assim o
-> MSBuild **não** interpreta o infixo `.en-US`/`.pt-BR` como cultura (o que os desviaria para
+> MSBuild **não** interpreta o infixo `.en-US`/`.pt-BR`/`.es-ES` como cultura (o que os desviaria para
 > satellite assemblies), preservando o deploy de **DLL única**. Lidos em runtime por `I18n`.
 
 ## 🔄 Ciclo build.ps1
@@ -32,7 +32,7 @@ build.ps1  [-Force]
   ├─ 2c. Fecha o GitExtensions se estiver em execução
   ├─ 3. Bump no .nuspec  ← <version>
   ├─ 4. Bump no .csproj  ← <Version>
-  ├─ 4b. Carimba versão + data no topo dos READMEs (README.md / .pt-BR / .en-US)
+  ├─ 4b. Carimba versão + data no topo dos READMEs (README.md / .pt-BR / .en-US / .es-ES)
   ├─ 4c. Carimba versão + data neste cofre Obsidian (notas que espelham a versão)
   ├─ 5. dotnet build -c Release
   ├─ 6. Copia DLL → C:\Program Files\GitExtensions\Plugins\  (requer Admin)
@@ -56,7 +56,7 @@ build.ps1  [-Force]
 |---|---|
 | `GitExtensions.ZimerfeldLFS.nuspec` | `<version>` |
 | `GitExtensions.ZimerfeldLFS.csproj` | `<Version>` (e `**Versão atual**` + link do NuGet no README.md) |
-| `README.md` / `README.pt-BR.md` / `README.en-US.md` | `**Version/Versão:**` e `**Updated/Atualizado em:**` |
+| `README.md` / `README.pt-BR.md` / `README.en-US.md` / `README.es-ES.md` | `**Version/Versão:**` e `**Updated/Atualizado em:**` |
 
 > **Nota:** o `build.ps1` carimba versão/data nos **READMEs** (seção 4b) **e** neste cofre Obsidian (seção 4c) — as notas que espelham a versão atual (Projeto, README espelho, Visão Geral, Versionamento, HOME) ficam em sincronia automática, igual ao irmão CommitMsg.
 

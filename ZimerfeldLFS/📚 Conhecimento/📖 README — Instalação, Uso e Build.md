@@ -22,7 +22,7 @@ Plugin para **[GitExtensions](https://gitextensions.github.io/)** que gerencia o
 - **Diretório de trabalho independente** — dropdown preenchido com o histórico de repositórios do GitExtensions; aponta a janela para qualquer repo sem depender do host. Ver [[📂 Diretório de Trabalho Independente]].
 - **Estado do LFS ao vivo** — versão do `git lfs`, se está inicializado, padrões glob rastreados e arquivos LFS, atualizados automaticamente.
 - **Console de saída** — cada botão mostra o comando `git`/`git lfs` exato e sua saída.
-- **Localizado (Inglês / Português)** com modo automático seguindo o SO, mais o **Mostrar Debug** que revela os IDs dos controles.
+- **Localizado (Inglês / Português / Espanhol)** com modo automático seguindo o SO, mais o **Mostrar Debug** que revela os IDs dos controles.
 
 ## 🧩 O que é o Git LFS?
 Extensão open-source do Git que troca arquivos grandes por ponteiros de texto leves; o conteúdo real fica num servidor remoto, acelerando o clone e evitando o inchaço. Detalhes em [[🗃️ Git LFS - Conceitos]].

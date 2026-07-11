@@ -42,7 +42,7 @@ Compara o timestamp mais novo entre fontes (`*.cs`/`*.csproj`/`*.nuspec`/`*.json
 
 ### 4b. Carimba os READMEs
 - `README.md`: atualiza `**Versão atual: …**` e o link do NuGet para a nova versão.
-- `README.md` / `README.pt-BR.md` / `README.en-US.md`: atualiza `**Version/Versão:**` e `**Updated/Atualizado em:**` (data de hoje).
+- `README.md` / `README.pt-BR.md` / `README.en-US.md` / `README.es-ES.md`: atualiza `**Version/Versão:**` e `**Updated/Atualizado em:**` (data de hoje).
 
 ### 4c. Carimba o cofre Obsidian
 Carimba `versao:`/`atualizado:` do frontmatter e as variantes de `Versão atual` (negrito, tabela e rótulo+crase) nas notas que espelham a versão atual do projeto (Projeto, README espelho, Visão Geral, Versionamento, HOME). Roda **antes** do pack, então o `.nupkg` continua sendo o arquivo mais novo (a detecção de mudanças não entra em loop).

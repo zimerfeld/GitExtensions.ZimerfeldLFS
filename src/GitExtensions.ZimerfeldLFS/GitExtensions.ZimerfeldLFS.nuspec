@@ -103,6 +103,7 @@ Features / Funcionalidades:
     <file src="..\..\README.md" target="" />
     <file src="..\..\README.pt-BR.md" target="" />
     <file src="..\..\README.en-US.md" target="" />
+    <file src="..\..\README.es-ES.md" target="" />
     <!-- Package icon shown on nuget.org (must match <icon> above) -->
     <file src="Resources\icon-128.png" target="icon.png" />
   </files>

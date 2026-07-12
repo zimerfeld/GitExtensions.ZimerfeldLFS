@@ -93,7 +93,7 @@ Anexa ao `txtLog` com auto-scroll; faz `BeginInvoke` se `InvokeRequired`.
 
 ## 🌐 Localização e Debug
 
-- **Idioma:** dropdown Automático/Inglês/Português → `I18n.SetLanguage` → `ApplyLanguage()` recarrega o `Translator` e reescreve todos os textos. `_suppressLangEvent` evita reentrância ao repopular o combo.
+- **Idioma:** dropdown Automático/Inglês/Português/Espanhol → `I18n.SetLanguage` → `ApplyLanguage()` recarrega o `Translator` e reescreve todos os textos. `_suppressLangEvent` evita reentrância ao repopular o combo.
 - **Mostrar Debug:** `ApplyControlTooltips(show)` percorre a árvore e seta o tooltip = `Name` de cada controle. Persistido em `%APPDATA%\GitExtensions\ZimerfeldLFS.uisettings.json` (`{"showControlIds":…}`).
 - **Sobre:** `LinkLabel` no banner → `MessageBox` com o texto localizado (`aboutText`).
 

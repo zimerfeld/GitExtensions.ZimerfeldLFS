@@ -454,6 +454,7 @@ public sealed class LfsForm : Form
         {
             1 => AppLanguage.English,
             2 => AppLanguage.Portuguese,
+            3 => AppLanguage.Spanish,
             _ => AppLanguage.Automatic,
         };
         I18n.SetLanguage(lang);
@@ -509,7 +510,7 @@ public sealed class LfsForm : Form
         _suppressLangEvent = true;
         int sel = _cboLanguage.SelectedIndex >= 0 ? _cboLanguage.SelectedIndex : (int)I18n.Current;
         _cboLanguage.Items.Clear();
-        _cboLanguage.Items.AddRange([_t["langAutomatic"], _t["langEnglish"], _t["langPortuguese"]]);
+        _cboLanguage.Items.AddRange([_t["langAutomatic"], _t["langEnglish"], _t["langPortuguese"], _t["langSpanish"]]);
         _cboLanguage.SelectedIndex = sel;
         _suppressLangEvent = false;
     }

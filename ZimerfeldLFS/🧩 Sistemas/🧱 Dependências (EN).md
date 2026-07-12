@@ -40,7 +40,7 @@ Both referenced with `<Private>false</Private>` — **not** copied to the output
 
 - DLL in the **`lib\` root** ("any" group, which the Plugin Manager extracts) — triggers the **NU5101** warning, intentional and filtered in `build.ps1`. See [[🔢 Versionamento (EN)|🔢 Versioning]].
 - The same DLL also in `tools\net9.0-windows\` for install via the **Package Manager Console** (`install.ps1`).
-- `LICENSE.txt` (CC BY-NC-ND 4.0, `type="file"`), `README.md`/`README.pt-BR.md`/`README.en-US.md`, and `icon.png` (from `Resources\icon-128.png`) at the package root.
+- `LICENSE.txt` (CC BY-NC-ND 4.0, `type="file"`), `README.md`/`README.pt-BR.md`/`README.en-US.md`/`README.es-ES.md`, and `icon.png` (from `Resources\icon-128.png`) at the package root.
 
 ## 🔑 Key interfaces used
 

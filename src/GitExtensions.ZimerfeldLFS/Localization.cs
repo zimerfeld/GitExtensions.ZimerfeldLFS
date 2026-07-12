@@ -7,7 +7,7 @@ using System.Text.Json;
 namespace GitExtensions.ZimerfeldLFS;
 
 /// <summary>User-selectable UI language. <see cref="Automatic"/> follows the OS UI culture.</summary>
-public enum AppLanguage { Automatic, English, Portuguese }
+public enum AppLanguage { Automatic, English, Portuguese, Spanish }
 
 /// <summary>
 /// Loads per-window text dictionaries (embedded JSON resources, one file per language) and persists
@@ -36,17 +36,22 @@ public static class I18n
     /// <summary>Resolves the active choice to a concrete culture code ("en-US" / "pt-BR").</summary>
     public static string Culture => CultureOf(_current);
 
-    /// <summary>Resolves an explicit language to a concrete culture code ("en-US" / "pt-BR").</summary>
+    /// <summary>Resolves an explicit language to a concrete culture code ("en-US" / "pt-BR" / "es-ES").</summary>
     public static string CultureOf(AppLanguage lang) => lang switch
     {
         AppLanguage.English    => "en-US",
         AppLanguage.Portuguese => "pt-BR",
+        AppLanguage.Spanish    => "es-ES",
         _                      => AutoCulture(),
     };
 
     private static string AutoCulture() =>
-        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.Equals("pt", StringComparison.OrdinalIgnoreCase)
-            ? "pt-BR" : "en-US";
+        CultureInfo.CurrentUICulture.TwoLetterISOLanguageName.ToLowerInvariant() switch
+        {
+            "pt" => "pt-BR",
+            "es" => "es-ES",
+            _    => "en-US",
+        };
 
     /// <summary>
     /// Loads the dictionary for <paramref name="scope"/> (= "ZimerfeldLFS") in the active language,

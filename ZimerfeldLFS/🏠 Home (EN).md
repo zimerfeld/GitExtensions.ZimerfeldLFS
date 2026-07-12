@@ -8,7 +8,7 @@ tags: [home, moc, zimerfeld, lfs]
 
 # 🏠 GitExtensions.ZimerfeldLFS — Neuron Vault
 
-> 🇧🇷 Leia esta página em português → [[🏠 Home]]
+> 🇧🇷 Leia esta página em português → [[🏠 Home]] · 🇪🇸 Lea en español → [[🏠 Home (ES)]]
 
 ![[icon-128.png]]
 
@@ -18,7 +18,7 @@ tags: [home, moc, zimerfeld, lfs]
 ## ⚡ Executive summary
 - **What it is:** an extension (MEF plugin) for **GitExtensions** exposing **Git LFS** in a **dedicated, non-modal window**, guiding the user through a **3-step** flow — *Installation* → *Track/Commit/Push* → *Clone/Pull*.
 - **Problem it solves:** Git LFS is powerful but command-line dependent and error-prone (`git lfs install`, `track`, `.gitattributes`). The plugin turns that flow into clicks, with a **visible log** of every command run.
-- **Differentiators:** a **persistent** window (does not interrupt the host); a **working directory independent** of the active repository; **i18n** (Automatic / EN-US / PT-BR); its own icon (4 quadrants + bomb); a sponsorship banner (GitHub Sponsors + Ko-fi).
+- **Differentiators:** a **persistent** window (does not interrupt the host); a **working directory independent** of the active repository; **i18n** (Automatic / EN-US / PT-BR / ES-ES); its own icon (4 quadrants + bomb); a sponsorship banner (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, targeting **net9.0-windows**, packed as a **nupkg**; build and versioning via `build.ps1`.
 - **Current state:** version **`1.0.4`** — functional, with **36 unit tests (xUnit)** covering the `LfsService`.
 - **Audience:** developers and teams versioning large assets (games, media, ML datasets) using GitExtensions on Windows.

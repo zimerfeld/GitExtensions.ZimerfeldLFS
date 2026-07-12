@@ -66,7 +66,7 @@ C:\GitExtensions\GitExtensions.ZimerfeldLFS\
 - **Independent working directory:** `cboRepo` dropdown populated from the **GitExtensions repository history** (read from the settings file), without depending on the host window. See [[📂 Diretório de Trabalho Independente (EN)|📂 Independent working directory]].
 - **Output console (log):** each button shows the **exact `git`/`git lfs` command** and its output in a dark console — nothing is hidden.
 - **Live LFS state:** detected version, whether it is initialized for the user, tracked patterns and LFS files — refreshed automatically after each operation and when switching repos.
-- **Localization (PT-BR / EN-US):** automatic mode following the OS + manual override (Automatic/English/Portuguese dropdown). See [[Localization.cs|I18n]].
+- **Localization (PT-BR / EN-US / ES-ES):** automatic mode following the OS + manual override (Automatic/English/Portuguese/Spanish dropdown). See [[Localization.cs|I18n]].
 - **Show Debug:** a toggle that displays each control's `Name` as a tooltip (development aid inherited from ZimerfeldTree).
 
 ## 🏗️ Architecture (Plugin → Form → Service)

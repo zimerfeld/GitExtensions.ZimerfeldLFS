@@ -90,11 +90,11 @@ if (Test-Path $readmeDoc) {
 
 # -- 4b. Atualizar cabecalho (Versao/Atualizado) no topo dos READMEs -----------
 $today = (Get-Date).ToString('yyyy-MM-dd')
-foreach ($doc in @("$PSScriptRoot\README.md", "$PSScriptRoot\README.pt-BR.md", "$PSScriptRoot\README.en-US.md")) {
+foreach ($doc in @("$PSScriptRoot\README.md", "$PSScriptRoot\README.pt-BR.md", "$PSScriptRoot\README.en-US.md", "$PSScriptRoot\README.es-ES.md")) {
     if (Test-Path $doc) {
         $c = Get-Content $doc -Raw -Encoding UTF8
-        $c = $c -replace '(?m)^\*\*(Versão|Version):\*\*\s+[\d\.]+',                             "**`$1:** $newVersion"
-        $c = $c -replace '(?m)^\*\*(Atualizado em|Updated on|Updated):\*\*\s+\d{4}-\d{2}-\d{2}', "**`$1:** $today"
+        $c = $c -replace '(?m)^\*\*(Versão|Version|Versión):\*\*\s+[\d\.]+',                                  "**`$1:** $newVersion"
+        $c = $c -replace '(?m)^\*\*(Atualizado em|Updated on|Updated|Actualizado):\*\*\s+\d{4}-\d{2}-\d{2}', "**`$1:** $today"
         [System.IO.File]::WriteAllText($doc, $c, [System.Text.Encoding]::UTF8)
         Write-Host "$([System.IO.Path]::GetFileName($doc)) atualizado para $newVersion ($today)"
     }
@@ -120,7 +120,13 @@ $obsidianDocs = @(
     "$vault\🏠 Home.md",
     "$vault\🏠 Home (EN).md",
     "$vault\📌 Backlog.md",
-    "$vault\📌 Backlog (EN).md"
+    "$vault\📌 Backlog (EN).md",
+    "$vault\💼 Negócio\📦 GitExtensions.ZimerfeldLFS (ES).md",
+    "$vault\📚 Conhecimento\📖 README — Instalação, Uso e Build (ES).md",
+    "$vault\🧩 Sistemas\🔭 Visão Geral (ES).md",
+    "$vault\🧩 Sistemas\🔢 Versionamento (ES).md",
+    "$vault\🏠 Home (ES).md",
+    "$vault\📌 Backlog (ES).md"
 )
 foreach ($obsDoc in $obsidianDocs) {
     if (Test-Path $obsDoc) {
@@ -137,6 +143,11 @@ foreach ($obsDoc in $obsidianDocs) {
         $v = $v -replace '(?i)(vers(?:ão|ion)\s+\*\*`?)[\d\.]+(`?\*\*)', ('${1}' + $newVersion + '${2}')
         # Versionamento EN: "current version: **`X`**"
         $v = $v -replace '(?i)(current version:\s+\*\*`?)[\d\.]+(`?\*\*)', ('${1}' + $newVersion + '${2}')
+        # ES: "Versión actual: **X**" (texto/negrito, tabela e rotulo+crase) e "versión **`X`**"
+        $v = $v -replace 'Versión actual: \*\*[\d\.]+\*\*',            "Versión actual: **$newVersion**"
+        $v = $v -replace '(\|\s*Versión actual\s*\|\s*`)[\d\.]+(`)',   ('${1}' + $newVersion + '${2}')
+        $v = $v -replace '(\*\*Versión actual:\*\*\s*`)[\d\.]+(`)',    ('${1}' + $newVersion + '${2}')
+        $v = $v -replace '(?i)(versión\s+\*\*`?)[\d\.]+(`?\*\*)',      ('${1}' + $newVersion + '${2}')
         [System.IO.File]::WriteAllText($obsDoc, $v, [System.Text.Encoding]::UTF8)
         Write-Host "Obsidian: $([System.IO.Path]::GetFileName($obsDoc)) atualizado para $newVersion ($today)"
     }

@@ -64,6 +64,7 @@
          infix as a culture (which would divert these into satellite assemblies). -->
     <EmbeddedResource Include="Resources\ZimerfeldLFS.pt-BR.json" WithCulture="false" LogicalName="GitExtensions.ZimerfeldLFS.Resources.ZimerfeldLFS.pt-BR.json" />
     <EmbeddedResource Include="Resources\ZimerfeldLFS.en-US.json" WithCulture="false" LogicalName="GitExtensions.ZimerfeldLFS.Resources.ZimerfeldLFS.en-US.json" />
+    <EmbeddedResource Include="Resources\ZimerfeldLFS.es-ES.json" WithCulture="false" LogicalName="GitExtensions.ZimerfeldLFS.Resources.ZimerfeldLFS.es-ES.json" />
   </ItemGroup>
 
   <ItemGroup>

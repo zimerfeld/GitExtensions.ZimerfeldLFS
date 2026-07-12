@@ -8,7 +8,7 @@ tags: [backlog, retomada, roadmap]
 
 # 📌 Backlog
 
-> 🇺🇸 Read this page in English → [[📌 Backlog (EN)]]
+> 🇺🇸 Read this page in English → [[📌 Backlog (EN)]] · 🇪🇸 Lea en español → [[📌 Backlog (ES)]]
 
 > [!tip] Comece por aqui ao retomar
 > Ponto de retomada do projeto **ZimerfeldLFS** em outra sessão. Leia também [[🏠 Home]] e a nota-mãe [[📦 GitExtensions.ZimerfeldLFS]].
@@ -17,7 +17,7 @@ tags: [backlog, retomada, roadmap]
 - **Versão:** `1.0.2` (`major.minor.BUILD`, fonte da verdade: `.nuspec` / `.csproj`).
 - **Testes:** **36 testes unitários (xUnit)** cobrindo o `LfsService`.
 - **Build:** `net9.0-windows`, WinForms `Library`, empacotado como `.nupkg` via [[🛠️ build.ps1]].
-- **Funcional:** fluxo guiado em 3 etapas (Instalação / Fluxo básico / Clone & Pull), diretório de trabalho independente, i18n (Automático / EN-US / PT-BR), banner de patrocínio.
+- **Funcional:** fluxo guiado em 3 etapas (Instalação / Fluxo básico / Clone & Pull), diretório de trabalho independente, i18n (Automático / EN-US / PT-BR / ES-ES), banner de patrocínio.
 - **Cofre:** reestruturado no padrão "Cofre de Neurônios v2" em 2026-07-04 (pares bilíngues, sortspec, custom-sort).
 
 ## 🔜 Próximos passos (derivados das notas)

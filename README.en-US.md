@@ -9,7 +9,7 @@ This plugin is built and maintained in my free time. If it saves you time managi
 [![GitHub Sponsor](https://img.shields.io/badge/Sponsor-zimerfeld-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/zimerfeld) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E2B?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/C0D621FCGD)
 
 > This document is the detailed, step-by-step manual for **operating** the plugin window.
-> For a high-level overview see the [main README](README.md) · Portuguese version: [README.pt-BR.md](README.pt-BR.md).
+> For a high-level overview see the [main README](README.md) · Portuguese version: [README.pt-BR.md](README.pt-BR.md) · Spanish version: [README.es-ES.md](README.es-ES.md).
 
 ---
 
@@ -17,7 +17,7 @@ This plugin is built and maintained in my free time. If it saves you time managi
 
 - **What it is:** a GitExtensions plugin (MEF) that surfaces **Git LFS** in a **dedicated, non-modal window**, guiding you through a **3-step flow** — *Installation* → *Track/Commit/Push* → *Clone/Pull*.
 - **Problem it solves:** Git LFS is powerful but command-line heavy and easy to misconfigure (`git lfs install`, `track`, `.gitattributes`). The plugin turns that flow into clicks, with a **visible log** of every `git`/`git lfs` command it runs.
-- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
+- **Differentiators:** persistent window (never interrupts your work in the host); **working directory independent** of the active GitExtensions repo; **i18n** (Automatic / EN-US / PT-BR / ES-ES); custom icon; sponsor banner (GitHub Sponsors + Ko-fi).
 - **Stack:** C# / WinForms `Library`, target **net9.0-windows**, packaged as a **nupkg**; build & versioning automated via `build.ps1`.
 - **Current state:** version **`1.0.2`** — functional, with **36 unit tests (xUnit)** covering `LfsService`.
 - **Target audience:** developers and teams versioning large assets (games, media, ML datasets) already using GitExtensions on Windows.
@@ -161,7 +161,7 @@ A typical restore sequence after a fresh clone that skipped LFS objects: **git l
 ## Bottom bar
 
 - **Show Debug** — reveals each control's internal `Name` as a tooltip (a diagnostics aid); the choice is persisted to `ZimerfeldLFS.uisettings.json`.
-- **Language** — *Automatic* (follows the OS), *English*, or *Portuguese*. Changing it re-labels the entire window immediately.
+- **Language** — *Automatic* (follows the OS), *English*, *Portuguese*, or *Spanish*. Changing it re-labels the entire window immediately.
 - **Close** — closes the window (also the <kbd>Esc</kbd> / Cancel action). The window is non-modal, so GitExtensions stays usable while it is open.
 
 ## Troubleshooting

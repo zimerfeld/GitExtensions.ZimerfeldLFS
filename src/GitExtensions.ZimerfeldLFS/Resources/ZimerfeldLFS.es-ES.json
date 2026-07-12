@@ -1,0 +1,61 @@
+{
+  "title": "ZimerfeldLFS — Git Large File Storage",
+  "workingDirectory": "Directorio de trabajo:",
+  "branchLabel": "Rama: {0}",
+  "branchNone": "(sin rama)",
+  "notARepo": "La carpeta seleccionada no es un repositorio Git.",
+  "about": "Acerca de LFS",
+  "aboutText": "ZimerfeldLFS\n\nGit Large File Storage (LFS) reemplaza los archivos grandes (audio, vídeo, conjuntos de datos) por punteros de texto ligeros dentro del repositorio. El contenido real del archivo se aloja en un servidor remoto aparte, acelerando la clonación y evitando el crecimiento excesivo del repositorio.\n\nEsta ventana te guía a través de tres pasos:\n  1. Instalación — git lfs install\n  2. Flujo básico — rastrear patrones, commit, push\n  3. Clonación y Pull — git lfs pull / fetch / checkout\n\nCopyright © 2026 Zimerfeld — CC BY-NC-ND 4.0",
+
+  "step1Title": "1 · Instalación",
+  "step2Title": "2 · Flujo Básico",
+  "step3Title": "3 · Clonación y Pull",
+
+  "step1Help": "En Windows y macOS, Git LFS suele venir incluido de fábrica.\r\nSi necesitas instalarlo manualmente, usa Homebrew (brew install git-lfs), Chocolatey (choco install git-lfs) o los binarios oficiales de https://git-lfs.com.\r\n\r\nLuego inicializa LFS para tu cuenta de usuario haciendo clic en \"git lfs install\" abajo (se ejecuta una vez por máquina).",
+  "btnCheckInstall": "Comprobar instalación",
+  "btnLfsInstall": "git lfs install",
+  "installMissing": "Git LFS NO está instalado o no está en el PATH.",
+  "installReady": "Git LFS listo — {0} (inicializado para este usuario).",
+  "installAvailable": "Git LFS disponible — {0}. Haz clic en \"git lfs install\" para inicializarlo.",
+
+  "trackHint": "Indica a Git LFS qué tipos de archivo gestionar usando patrones glob (p. ej. *.psd, *.mp4, *.zip).",
+  "patternPlaceholder": "Patrón glob, p. ej. *.psd",
+  "btnTrack": "Rastrear",
+  "patternsLabel": "Patrones rastreados:",
+  "btnUntrack": "Dejar de rastrear",
+  "lfsFilesLabel": "Archivos gestionados por LFS ({0}):",
+  "btnCommit": "Commit…",
+  "btnPush": "Push…",
+
+  "step3Help": "Cuando los colaboradores o las herramientas de despliegue clonan el repositorio, Git LFS descarga automáticamente los archivos pesados al hacer checkout de la rama.\r\n\r\nPara obtener o restaurar el contenido LFS más tarde, usa los botones de abajo:\r\n  • git lfs pull — descarga el contenido LFS del checkout actual\r\n  • git lfs fetch --all — precarga los objetos LFS de todas las refs\r\n  • git lfs checkout — rellena los archivos del árbol de trabajo a partir de los objetos descargados\r\n  • git lfs status — muestra el estado de los objetos LFS",
+  "btnLfsPull": "git lfs pull",
+  "btnLfsFetchAll": "git lfs fetch --all",
+  "btnLfsCheckout": "git lfs checkout",
+  "btnLfsStatus": "git lfs status",
+
+  "logLabel": "Salida:",
+  "btnClearLog": "Limpiar",
+  "close": "Cerrar",
+  "showDebug": "Mostrar Debug",
+  "language": "Idioma:",
+  "langAutomatic": "Automático",
+  "langEnglish": "Inglés",
+  "langPortuguese": "Portugués",
+  "langSpanish": "Español",
+
+  "statusReady": "Listo.",
+  "statusRunning": "Ejecutando: {0}…",
+  "statusRefreshing": "Actualizando…",
+
+  "logDone": "✓ Hecho.",
+  "logFailed": "✗ Falló (código de salida {0}).",
+  "logCommitUnavailable": "Diálogo de commit no disponible en este contexto.",
+  "logCommitDone": "✓ Commit completado.",
+  "logCommitClosed": "Diálogo de commit cerrado sin realizar commit.",
+  "logPushDone": "✓ Push completado.",
+  "logPushFallback": "Diálogo de push del host no disponible — ejecutando \"git push\" simple.",
+
+  "errEmptyPattern": "Introduce un patrón glob para rastrear (p. ej. *.psd).",
+  "errNoPatternSelected": "Selecciona un patrón rastreado para dejar de rastrear.",
+  "errNoRepo": "Selecciona primero un repositorio Git válido."
+}

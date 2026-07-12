@@ -42,7 +42,7 @@ Compares the newest timestamp among sources (`*.cs`/`*.csproj`/`*.nuspec`/`*.jso
 
 ### 4b. Stamps the READMEs
 - `README.md`: updates `**Versão atual: …**` and the NuGet link to the new version.
-- `README.md` / `README.pt-BR.md` / `README.en-US.md`: updates `**Version/Versão:**` and `**Updated/Atualizado em:**` (today's date).
+- `README.md` / `README.pt-BR.md` / `README.en-US.md` / `README.es-ES.md`: updates `**Version/Versão:**` and `**Updated/Atualizado em:**` (today's date).
 
 ### 4c. Stamps the Obsidian vault
 Stamps the frontmatter `versao:`/`atualizado:` and the `Versão atual` variants (bold, table and label+backtick) in the notes that mirror the project's current version (Project, README mirror, Overview, Versioning, HOME). Runs **before** the pack, so the `.nupkg` remains the newest file (change detection does not loop).

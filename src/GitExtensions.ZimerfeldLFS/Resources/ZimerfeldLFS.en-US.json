@@ -41,6 +41,7 @@
   "langAutomatic": "Automatic",
   "langEnglish": "English",
   "langPortuguese": "Portuguese",
+  "langSpanish": "Spanish",
 
   "statusReady": "Ready.",
   "statusRunning": "Running: {0}…",

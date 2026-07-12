@@ -39,3 +39,23 @@ para que `main` e `develop` **não divirjam**:
    feature/<nome-sugestivo> develop`), com um **nome sugestivo** que descreva a
    próxima demanda. Todo trabalho novo começa a partir da `develop` já
    sincronizada, nunca a partir da `main` nem de uma `develop` defasada.
+
+## Paridade de idiomas — PT, EN e ES sempre juntos
+
+Este projeto é **trilíngue**: Português (`pt-BR`), Inglês (`en-US`) e Espanhol
+(`es-ES`). Ao criar ou alterar qualquer conteúdo com variantes por idioma,
+**sempre crie/atualize as três versões na mesma alteração** — nunca deixe um
+idioma para trás. A paridade entre PT, EN e ES deve ser mantida em:
+
+- **READMEs:** `README.md` (resumo bilíngue), `README.pt-BR.md`,
+  `README.en-US.md` e `README.es-ES.md`.
+- **Cofre Obsidian:** cada nota tem as variantes base (PT), `(EN)` e `(ES)`; ao
+  criar ou editar uma nota, replique a mudança nas três (incluindo frontmatter
+  `lang:` e os wikilinks apontando para os irmãos do mesmo idioma).
+- **Dicionários de UI:** `Resources/ZimerfeldLFS.pt-BR.json`,
+  `ZimerfeldLFS.en-US.json` e `ZimerfeldLFS.es-ES.json` devem ter **exatamente
+  as mesmas chaves** (nenhuma chave só em um idioma).
+- **Landing page** (`index.html`) e qualquer outro texto com variantes por idioma.
+
+Ao acrescentar uma nova string, seção ou documento em um idioma, traduza e
+atualize **imediatamente** os outros dois idiomas para não quebrar a paridade.

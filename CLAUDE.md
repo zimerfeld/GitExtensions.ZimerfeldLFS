@@ -25,3 +25,17 @@ Em vez disso: faça commit na branch de trabalho designada e faça push dela.
 O merge para `main` e a publicação em produção são conduzidos pelo mantenedor
 através do gitflow/Actions estabelecido. Só crie/aprove/mescle PRs se o
 usuário pedir explicitamente naquela conversa.
+
+## Rito pós-publicação — sincronizar `develop` e abrir nova feature
+
+Sempre que a `main` for publicada (release/deploy), execute o rito gitflow
+para que `main` e `develop` **não divirjam**:
+
+1. **Sincronize `develop` com `main`** com um *back-merge* (`git checkout develop`
+   → `git merge --no-ff main` → `git push origin develop`), seguindo a
+   convenção de mensagem do repositório (`back-merge main into develop`).
+   Assim tudo o que foi publicado na `main` volta para a `develop`.
+2. **Crie a próxima feature a partir da `develop`** (`git checkout -b
+   feature/<nome-sugestivo> develop`), com um **nome sugestivo** que descreva a
+   próxima demanda. Todo trabalho novo começa a partir da `develop` já
+   sincronizada, nunca a partir da `main` nem de uma `develop` defasada.

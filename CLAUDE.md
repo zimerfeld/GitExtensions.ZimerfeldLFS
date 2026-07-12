@@ -2,6 +2,13 @@
 
 Guia para o Claude Code ao trabalhar neste repositório.
 
+## Idioma do chat — sempre Português (BR)
+
+Responda **sempre em Português do Brasil (pt-BR)** nas mensagens do chat,
+independentemente do idioma em que a pergunta for feita. (Isto vale para a
+comunicação com o usuário; o conteúdo de código, commits e documentos segue as
+convenções de cada arquivo/idioma.)
+
 ## Fluxo de publicação (gitflow) — NÃO criar nem aprovar PRs
 
 O processo de publicação deste projeto já está estabelecido e é baseado em

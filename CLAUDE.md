@@ -60,20 +60,20 @@ idioma para trás. A paridade entre PT, EN e ES deve ser mantida em:
 Ao acrescentar uma nova string, seção ou documento em um idioma, traduza e
 atualize **imediatamente** os outros dois idiomas para não quebrar a paridade.
 
-## Pílula de idioma — sempre AUTO / PT / EN / ES (AUTO pré-selecionado)
+## Seletores de idioma (pílulas e combos) — sempre AUTO / PT / EN / ES (AUTO pré-selecionado)
 
-O seletor (pílula) de idioma deve **sempre** oferecer as quatro opções, nesta
-ordem — **AUTO**, **PT**, **EN**, **ES** — com **AUTO pré-selecionado** por
-padrão. `AUTO` segue o idioma do sistema/navegador; `PT`, `EN` e `ES` forçam o
-idioma correspondente.
+**Todo** seletor de idioma do projeto — seja **pílula** (toggle/segmentado) ou
+**combo** (dropdown/`ComboBox`) — deve **sempre** oferecer as quatro opções,
+nesta ordem — **AUTO**, **PT**, **EN**, **ES** — com **AUTO pré-selecionado**
+por padrão. `AUTO` segue o idioma do sistema/navegador; `PT`, `EN` e `ES` forçam
+o idioma correspondente.
 
-Esta regra vale para **todas** as pílulas/seletores de idioma do projeto:
+Esta regra vale para **todos** os seletores de idioma do projeto:
 
-- **Janela do plugin** (`LfsForm` / `_cboLanguage`): itens
+- **Combo da janela do plugin** (`LfsForm` / `_cboLanguage`): itens
   `Automático / Português / Inglês / Espanhol`, com `Automático` selecionado
   quando não há escolha persistida.
-- **Landing page** (`index.html`): a pílula de idioma deve seguir a mesma ordem
-  e default `AUTO`.
+- **Pílula da landing page** (`index.html`): mesma ordem e default `AUTO`.
 
-Ao acrescentar um novo idioma, ele entra na pílula mantendo `AUTO` na frente e
-`AUTO` como pré-selecionado.
+Ao acrescentar um novo idioma, ele entra no seletor (pílula ou combo) mantendo
+`AUTO` na frente e `AUTO` como pré-selecionado.

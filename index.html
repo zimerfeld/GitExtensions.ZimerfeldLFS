@@ -21,12 +21,19 @@
   a{color:var(--accent);text-decoration:none}
   a:hover{text-decoration:underline}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-  .lang-pt{display:none}
-  html[data-lang="pt"] .lang-en{display:none}
+  /* i18n — EN is the base; PT and ES are hidden until their data-lang is active */
+  .lang-pt,.lang-es{display:none}
+  .block.lang-pt,.block.lang-es{display:none}
+  /* PT active */
+  html[data-lang="pt"] .lang-en,html[data-lang="pt"] .lang-es{display:none}
   html[data-lang="pt"] .lang-pt{display:inline}
   html[data-lang="pt"] .block.lang-pt{display:block}
-  .block.lang-pt{display:none}
   html[data-lang="pt"] h2.lang-pt,html[data-lang="pt"] h3.lang-pt{display:block}
+  /* ES active */
+  html[data-lang="es"] .lang-en,html[data-lang="es"] .lang-pt{display:none}
+  html[data-lang="es"] .lang-es{display:inline}
+  html[data-lang="es"] .block.lang-es{display:block}
+  html[data-lang="es"] h2.lang-es,html[data-lang="es"] h3.lang-es{display:block}
   /* top nav */
   nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
     background:rgba(13,17,23,.72);border-bottom:1px solid var(--line)}
@@ -94,11 +101,15 @@
     <span class="spacer"></span>
     <a href="#features" class="lang-en" style="color:var(--muted);font-size:14px">Features</a>
     <a href="#features" class="lang-pt" style="color:var(--muted);font-size:14px">Funcionalidades</a>
+    <a href="#features" class="lang-es" style="color:var(--muted);font-size:14px">Funciones</a>
     <a href="#install" class="lang-en" style="color:var(--muted);font-size:14px">Install</a>
     <a href="#install" class="lang-pt" style="color:var(--muted);font-size:14px">Instalação</a>
+    <a href="#install" class="lang-es" style="color:var(--muted);font-size:14px">Instalación</a>
     <div class="toggle" role="group" aria-label="Language">
-      <button data-set="en">EN</button>
+      <button data-set="auto">AUTO</button>
       <button data-set="pt">PT</button>
+      <button data-set="en">EN</button>
+      <button data-set="es">ES</button>
     </div>
   </div>
 </nav>
@@ -109,6 +120,7 @@
     <h1>GitExtensions.ZimerfeldLFS</h1>
     <p class="tagline lang-en">Manage Git LFS (Large File Storage) from a dedicated window — track, commit, push, clone &amp; pull large files without the command line.</p>
     <p class="tagline lang-pt">Gerencie o Git LFS (Large File Storage) numa janela dedicada — track, commit, push, clone e pull de arquivos grandes sem linha de comando.</p>
+    <p class="tagline lang-es">Gestiona Git LFS (Large File Storage) desde una ventana dedicada — track, commit, push, clone y pull de archivos grandes sin línea de comandos.</p>
     <div class="badges">
       <a href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/"><img alt="NuGet version" src="https://img.shields.io/nuget/v/GitExtensions.ZimerfeldLFS?logo=nuget&label=NuGet"></a>
       <a href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/"><img alt="NuGet downloads" src="https://img.shields.io/nuget/dt/GitExtensions.ZimerfeldLFS?logo=nuget&label=Downloads"></a>
@@ -116,21 +128,22 @@
     </div>
     <div class="cta">
       <a class="btn primary" href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/">
-        <span class="lang-en">Get it on NuGet</span><span class="lang-pt">Baixar no NuGet</span></a>
+        <span class="lang-en">Get it on NuGet</span><span class="lang-pt">Baixar no NuGet</span><span class="lang-es">Descargar en NuGet</span></a>
       <a class="btn" href="https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS">GitHub</a>
       <a class="btn" href="https://github.com/sponsors/zimerfeld"><span class="heart">&#10084;</span>
-        <span class="lang-en">Sponsor</span><span class="lang-pt">Patrocinar</span></a>
+        <span class="lang-en">Sponsor</span><span class="lang-pt">Patrocinar</span><span class="lang-es">Patrocinar</span></a>
     </div>
   </div>
 </header>
 
 <section id="features">
   <div class="wrap">
-    <h2 class="lang-en">Features</h2><h2 class="lang-pt">Funcionalidades</h2>
+    <h2 class="lang-en">Features</h2><h2 class="lang-pt">Funcionalidades</h2><h2 class="lang-es">Funciones</h2>
     <p class="sub lang-en">What GitExtensions.ZimerfeldLFS brings to your GitExtensions.</p>
     <p class="sub lang-pt">O que o GitExtensions.ZimerfeldLFS traz para o seu GitExtensions.</p>
+    <p class="sub lang-es">Lo que GitExtensions.ZimerfeldLFS aporta a tu GitExtensions.</p>
     <div class="grid">
-      <div class="card"><span class="ic">🪟</span><h3 class="lang-en">Dedicated, non-modal window</h3><h3 class="lang-pt">Janela dedicada e não-modal</h3><p class="lang-en">Surfaces Git LFS without ever interrupting your work in the GitExtensions host.</p><p class="lang-pt">Expõe o Git LFS sem nunca interromper o seu trabalho na janela do GitExtensions.</p></div><div class="card"><span class="ic">🔓</span><h3 class="lang-en">Three-step guided flow</h3><h3 class="lang-pt">Fluxo guiado em 3 etapas</h3><p class="lang-en">Installation → Track/Commit/Push → Clone/Pull, each as its own tab.</p><p class="lang-pt">Instalação → Track/Commit/Push → Clone/Pull, cada uma em sua aba.</p></div><div class="card"><span class="ic">📁</span><h3 class="lang-en">Independent working directory</h3><h3 class="lang-pt">Diretório de trabalho independente</h3><p class="lang-en">Point the window at any repo from your GitExtensions history, regardless of the host.</p><p class="lang-pt">Aponte a janela para qualquer repo do histórico do GitExtensions, independente do host.</p></div><div class="card"><span class="ic">🖥️</span><h3 class="lang-en">Visible command log</h3><h3 class="lang-pt">Log de comandos visível</h3><p class="lang-en">Every <code>git</code> / <code>git lfs</code> command and its output — nothing hidden.</p><p class="lang-pt">Cada comando <code>git</code> / <code>git lfs</code> e sua saída — sem esconder nada.</p></div><div class="card"><span class="ic">🌐</span><h3 class="lang-en">Localized (EN / PT)</h3><h3 class="lang-pt">Localizado (EN / PT)</h3><p class="lang-en">Automatic mode following the OS, plus a Show Debug toggle for control IDs.</p><p class="lang-pt">Modo automático seguindo o SO, além do Show Debug que revela os IDs dos controles.</p></div><div class="card"><span class="ic">✅</span><h3 class="lang-en">36 unit tests</h3><h3 class="lang-pt">36 testes unitários</h3><p class="lang-en">The LfsService is covered by 36 xUnit tests — built for reliability.</p><p class="lang-pt">O LfsService é coberto por 36 testes xUnit — feito para confiabilidade.</p></div>
+      <div class="card"><span class="ic">🪟</span><h3 class="lang-en">Dedicated, non-modal window</h3><h3 class="lang-pt">Janela dedicada e não-modal</h3><h3 class="lang-es">Ventana dedicada y no modal</h3><p class="lang-en">Surfaces Git LFS without ever interrupting your work in the GitExtensions host.</p><p class="lang-pt">Expõe o Git LFS sem nunca interromper o seu trabalho na janela do GitExtensions.</p><p class="lang-es">Muestra Git LFS sin interrumpir nunca tu trabajo en la ventana de GitExtensions.</p></div><div class="card"><span class="ic">🔓</span><h3 class="lang-en">Three-step guided flow</h3><h3 class="lang-pt">Fluxo guiado em 3 etapas</h3><h3 class="lang-es">Flujo guiado en 3 etapas</h3><p class="lang-en">Installation → Track/Commit/Push → Clone/Pull, each as its own tab.</p><p class="lang-pt">Instalação → Track/Commit/Push → Clone/Pull, cada uma em sua aba.</p><p class="lang-es">Instalación → Track/Commit/Push → Clone/Pull, cada una en su pestaña.</p></div><div class="card"><span class="ic">📁</span><h3 class="lang-en">Independent working directory</h3><h3 class="lang-pt">Diretório de trabalho independente</h3><h3 class="lang-es">Directorio de trabajo independiente</h3><p class="lang-en">Point the window at any repo from your GitExtensions history, regardless of the host.</p><p class="lang-pt">Aponte a janela para qualquer repo do histórico do GitExtensions, independente do host.</p><p class="lang-es">Apunta la ventana a cualquier repo del historial de GitExtensions, independiente del host.</p></div><div class="card"><span class="ic">🖥️</span><h3 class="lang-en">Visible command log</h3><h3 class="lang-pt">Log de comandos visível</h3><h3 class="lang-es">Log de comandos visible</h3><p class="lang-en">Every <code>git</code> / <code>git lfs</code> command and its output — nothing hidden.</p><p class="lang-pt">Cada comando <code>git</code> / <code>git lfs</code> e sua saída — sem esconder nada.</p><p class="lang-es">Cada comando <code>git</code> / <code>git lfs</code> y su salida — sin ocultar nada.</p></div><div class="card"><span class="ic">🌐</span><h3 class="lang-en">Localized (EN / PT / ES)</h3><h3 class="lang-pt">Localizado (EN / PT / ES)</h3><h3 class="lang-es">Localizado (EN / PT / ES)</h3><p class="lang-en">Automatic mode following the OS, plus a Show Debug toggle for control IDs.</p><p class="lang-pt">Modo automático seguindo o SO, além do Show Debug que revela os IDs dos controles.</p><p class="lang-es">Modo automático siguiendo el SO, más el Show Debug que revela los IDs de los controles.</p></div><div class="card"><span class="ic">✅</span><h3 class="lang-en">36 unit tests</h3><h3 class="lang-pt">36 testes unitários</h3><h3 class="lang-es">36 pruebas unitarias</h3><p class="lang-en">The LfsService is covered by 36 xUnit tests — built for reliability.</p><p class="lang-pt">O LfsService é coberto por 36 testes xUnit — feito para confiabilidade.</p><p class="lang-es">El LfsService está cubierto por 36 pruebas xUnit — hecho para la fiabilidad.</p></div>
     </div>
   </div>
 </section>
@@ -139,11 +152,12 @@
 
 <section id="screens">
   <div class="wrap">
-    <h2 class="lang-en">Screenshots</h2><h2 class="lang-pt">Printscreens</h2>
+    <h2 class="lang-en">Screenshots</h2><h2 class="lang-pt">Printscreens</h2><h2 class="lang-es">Capturas de pantalla</h2>
     <p class="sub lang-en">A look at the plugin in action.</p>
     <p class="sub lang-pt">Uma olhada no plugin em ação.</p>
+    <p class="sub lang-es">Un vistazo al plugin en acción.</p>
     <div class="shots">
-      <figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotInstallation.png" alt="Installation tab"><figcaption><span class="lang-en">Installation tab</span><span class="lang-pt">Aba de Instalação</span></figcaption></figure><figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotBasicWorkflow.png" alt="Basic workflow — track / commit / push"><figcaption><span class="lang-en">Basic workflow — track / commit / push</span><span class="lang-pt">Fluxo básico — track / commit / push</span></figcaption></figure><figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotCloningPulling.png" alt="Cloning &amp; pulling"><figcaption><span class="lang-en">Cloning &amp; pulling</span><span class="lang-pt">Clone &amp; Pull</span></figcaption></figure>
+      <figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotInstallation.png" alt="Installation tab"><figcaption><span class="lang-en">Installation tab</span><span class="lang-pt">Aba de Instalação</span><span class="lang-es">Pestaña de Instalación</span></figcaption></figure><figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotBasicWorkflow.png" alt="Basic workflow — track / commit / push"><figcaption><span class="lang-en">Basic workflow — track / commit / push</span><span class="lang-pt">Fluxo básico — track / commit / push</span><span class="lang-es">Flujo básico — track / commit / push</span></figcaption></figure><figure><img loading="lazy" src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/screenshots/screenshotCloningPulling.png" alt="Cloning &amp; pulling"><figcaption><span class="lang-en">Cloning &amp; pulling</span><span class="lang-pt">Clone &amp; Pull</span><span class="lang-es">Clone y Pull</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -152,24 +166,28 @@
 
 <section id="install">
   <div class="wrap">
-    <h2 class="lang-en">Installation</h2><h2 class="lang-pt">Instalação</h2>
+    <h2 class="lang-en">Installation</h2><h2 class="lang-pt">Instalação</h2><h2 class="lang-es">Instalación</h2>
     <p class="sub lang-en">Two ways to get up and running.</p>
     <p class="sub lang-pt">Duas formas de começar.</p>
+    <p class="sub lang-es">Dos formas de empezar.</p>
     <div class="steps">
       <div class="step"><div>
-        <strong class="lang-en">Plugin Manager (recommended)</strong><strong class="lang-pt">Gerenciador de Plugins (recomendado)</strong><br>
+        <strong class="lang-en">Plugin Manager (recommended)</strong><strong class="lang-pt">Gerenciador de Plugins (recomendado)</strong><strong class="lang-es">Gestor de Plugins (recomendado)</strong><br>
         <span class="lang-en">In GitExtensions, open <code>Plugins &rarr; Plugin Manager</code>, search for <code>ZimerfeldLFS</code> and install. Restart, then open <code>Plugins &rarr; ZimerfeldLFS</code>.</span>
         <span class="lang-pt">No GitExtensions, abra <code>Plugins &rarr; Plugin Manager</code>, procure por <code>ZimerfeldLFS</code> e instale. Reinicie e abra <code>Plugins &rarr; ZimerfeldLFS</code>.</span>
+        <span class="lang-es">En GitExtensions, abre <code>Plugins &rarr; Plugin Manager</code>, busca <code>ZimerfeldLFS</code> e instálalo. Reinicia y abre <code>Plugins &rarr; ZimerfeldLFS</code>.</span>
       </div></div>
       <div class="step"><div>
-        <strong class="lang-en">Manual</strong><strong class="lang-pt">Manual</strong><br>
+        <strong class="lang-en">Manual</strong><strong class="lang-pt">Manual</strong><strong class="lang-es">Manual</strong><br>
         <span class="lang-en">Install the <a href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/">NuGet package</a> or drop the plugin DLL into <code>C:\Program Files\GitExtensions\Plugins\</code>.</span>
         <span class="lang-pt">Instale o <a href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/">pacote NuGet</a> ou copie a DLL do plugin para <code>C:\Program Files\GitExtensions\Plugins\</code>.</span>
+        <span class="lang-es">Instala el <a href="https://www.nuget.org/packages/GitExtensions.ZimerfeldLFS/">paquete NuGet</a> o copia la DLL del plugin en <code>C:\Program Files\GitExtensions\Plugins\</code>.</span>
       </div></div>
     </div>
     <p class="sub" style="margin-top:16px">
       <span class="lang-en">Requires <a href="https://gitextensions.github.io/">GitExtensions</a> 6.x (.NET 9) on Windows.</span>
       <span class="lang-pt">Requer o <a href="https://gitextensions.github.io/">GitExtensions</a> 6.x (.NET 9) no Windows.</span>
+      <span class="lang-es">Requiere <a href="https://gitextensions.github.io/">GitExtensions</a> 6.x (.NET 9) en Windows.</span>
     </p>
   </div>
 </section>
@@ -178,9 +196,10 @@
 
 <section id="docs">
   <div class="wrap">
-    <h2 class="lang-en">Full documentation</h2><h2 class="lang-pt">Documentação completa</h2>
+    <h2 class="lang-en">Full documentation</h2><h2 class="lang-pt">Documentação completa</h2><h2 class="lang-es">Documentación completa</h2>
     <p class="sub lang-en"><strong>Technical details, features, screenshots and installation</strong> are available per language. Click here:</p>
     <p class="sub lang-pt"><strong>Detalhes técnicos, funcionalidades, printscreens e instalação</strong> estão disponíveis por idioma. Clique aqui:</p>
+    <p class="sub lang-es"><strong>Detalles técnicos, funciones, capturas de pantalla e instalación</strong> están disponibles por idioma. Haz clic aquí:</p>
     <div class="langlinks">
       <a href="https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.en-US.md">&#127482;&#127480; English (United States)</a>
       <a href="https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.pt-BR.md">&#127463;&#127479; Português (Brasil)</a>
@@ -194,6 +213,7 @@
     <div>
       <span class="lang-en">Copyright &copy; 2026 Renato Zimerfeld &mdash; <strong>CC BY-NC-ND 4.0</strong>.</span>
       <span class="lang-pt">Copyright &copy; 2026 Renato Zimerfeld &mdash; <strong>CC BY-NC-ND 4.0</strong>.</span>
+      <span class="lang-es">Copyright &copy; 2026 Renato Zimerfeld &mdash; <strong>CC BY-NC-ND 4.0</strong>.</span>
     </div>
     <div>
       <a href="https://zimerfeld.com">zimerfeld.com</a> &nbsp;&middot;&nbsp;
@@ -206,19 +226,29 @@
 <script>
   (function(){
     var html=document.documentElement;
-    function set(l){
-      html.setAttribute('data-lang',l);
-      html.setAttribute('lang', l==='pt'?'pt-BR':'en');
+    // AUTO follows the browser locale; explicit modes force the language.
+    function detect(){
+      var l=(navigator.language||'en').toLowerCase();
+      if(l.indexOf('pt')===0) return 'pt';
+      if(l.indexOf('es')===0) return 'es';
+      return 'en';
+    }
+    function apply(mode){
+      var disp = (mode==='auto') ? detect() : mode;
+      html.setAttribute('data-lang', disp);
+      html.setAttribute('lang', disp==='pt' ? 'pt-BR' : (disp==='es' ? 'es-ES' : 'en'));
       document.querySelectorAll('.toggle button').forEach(function(b){
-        b.classList.toggle('active', b.dataset.set===l);
+        b.classList.toggle('active', b.dataset.set===mode);
       });
-      try{localStorage.setItem('zf-lang',l);}catch(e){}
+      try{localStorage.setItem('zf-lang',mode);}catch(e){}
     }
     var saved=null; try{saved=localStorage.getItem('zf-lang');}catch(e){}
-    var initial = saved || ((navigator.language||'en').toLowerCase().indexOf('pt')===0?'pt':'en');
-    set(initial);
+    // Default mode is AUTO (pre-selected pill), unless the visitor forced one before.
+    var valid={auto:1,pt:1,en:1,es:1};
+    var initial = (saved && valid[saved]) ? saved : 'auto';
+    apply(initial);
     document.querySelectorAll('.toggle button').forEach(function(b){
-      b.addEventListener('click',function(){set(b.dataset.set);});
+      b.addEventListener('click',function(){apply(b.dataset.set);});
     });
   })();
 </script>

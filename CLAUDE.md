@@ -25,3 +25,55 @@ Em vez disso: faça commit na branch de trabalho designada e faça push dela.
 O merge para `main` e a publicação em produção são conduzidos pelo mantenedor
 através do gitflow/Actions estabelecido. Só crie/aprove/mescle PRs se o
 usuário pedir explicitamente naquela conversa.
+
+## Rito pós-publicação — sincronizar `develop` e abrir nova feature
+
+Sempre que a `main` for publicada (release/deploy), execute o rito gitflow
+para que `main` e `develop` **não divirjam**:
+
+1. **Sincronize `develop` com `main`** com um *back-merge* (`git checkout develop`
+   → `git merge --no-ff main` → `git push origin develop`), seguindo a
+   convenção de mensagem do repositório (`back-merge main into develop`).
+   Assim tudo o que foi publicado na `main` volta para a `develop`.
+2. **Crie a próxima feature a partir da `develop`** (`git checkout -b
+   feature/<nome-sugestivo> develop`), com um **nome sugestivo** que descreva a
+   próxima demanda. Todo trabalho novo começa a partir da `develop` já
+   sincronizada, nunca a partir da `main` nem de uma `develop` defasada.
+
+## Paridade de idiomas — PT, EN e ES sempre juntos
+
+Este projeto é **trilíngue**: Português (`pt-BR`), Inglês (`en-US`) e Espanhol
+(`es-ES`). Ao criar ou alterar qualquer conteúdo com variantes por idioma,
+**sempre crie/atualize as três versões na mesma alteração** — nunca deixe um
+idioma para trás. A paridade entre PT, EN e ES deve ser mantida em:
+
+- **READMEs:** `README.md` (resumo bilíngue), `README.pt-BR.md`,
+  `README.en-US.md` e `README.es-ES.md`.
+- **Cofre Obsidian:** cada nota tem as variantes base (PT), `(EN)` e `(ES)`; ao
+  criar ou editar uma nota, replique a mudança nas três (incluindo frontmatter
+  `lang:` e os wikilinks apontando para os irmãos do mesmo idioma).
+- **Dicionários de UI:** `Resources/ZimerfeldLFS.pt-BR.json`,
+  `ZimerfeldLFS.en-US.json` e `ZimerfeldLFS.es-ES.json` devem ter **exatamente
+  as mesmas chaves** (nenhuma chave só em um idioma).
+- **Landing page** (`index.html`) e qualquer outro texto com variantes por idioma.
+
+Ao acrescentar uma nova string, seção ou documento em um idioma, traduza e
+atualize **imediatamente** os outros dois idiomas para não quebrar a paridade.
+
+## Seletores de idioma (pílulas e combos) — sempre AUTO / PT / EN / ES (AUTO pré-selecionado)
+
+**Todo** seletor de idioma do projeto — seja **pílula** (toggle/segmentado) ou
+**combo** (dropdown/`ComboBox`) — deve **sempre** oferecer as quatro opções,
+nesta ordem — **AUTO**, **PT**, **EN**, **ES** — com **AUTO pré-selecionado**
+por padrão. `AUTO` segue o idioma do sistema/navegador; `PT`, `EN` e `ES` forçam
+o idioma correspondente.
+
+Esta regra vale para **todos** os seletores de idioma do projeto:
+
+- **Combo da janela do plugin** (`LfsForm` / `_cboLanguage`): itens
+  `Automático / Português / Inglês / Espanhol`, com `Automático` selecionado
+  quando não há escolha persistida.
+- **Pílula da landing page** (`index.html`): mesma ordem e default `AUTO`.
+
+Ao acrescentar um novo idioma, ele entra no seletor (pílula ou combo) mantendo
+`AUTO` na frente e `AUTO` como pré-selecionado.

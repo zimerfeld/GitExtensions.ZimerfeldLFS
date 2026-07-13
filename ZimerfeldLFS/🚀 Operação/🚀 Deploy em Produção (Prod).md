@@ -8,8 +8,6 @@ tags: [operacao, runbook, prod, release, nupkg, nuget]
 
 # 🚀 Deploy em Produção (Prod)
 
-> 🇺🇸 Read this page in English → [[🚀 Deploy em Produção (Prod) (EN)]]
-
 Como publicar uma nova versão do plugin: gerar o pacote `.nupkg` de release e distribuí-lo (NuGet + GitHub release), de onde o Plugin Manager do GitExtensions o descobre.
 
 ## ⚡ TL;DR — o comando único

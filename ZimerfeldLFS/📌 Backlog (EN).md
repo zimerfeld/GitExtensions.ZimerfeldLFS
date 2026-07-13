@@ -2,7 +2,7 @@
 tipo: backlog
 projeto: GitExtensions.ZimerfeldLFS
 lang: en-US
-atualizado: 2026-07-04
+atualizado: 2026-07-07
 tags: [backlog, retomada, roadmap]
 ---
 
@@ -30,6 +30,9 @@ tags: [backlog, retomada, roadmap]
 ## 💡 Ideas / to evaluate
 - [ ] Document/expand the window operation manual (`README.en-US.md` / `README.pt-BR.md`) linked from the "The three steps" section.
 - [ ] Reinforce the cohesive portfolio with the siblings [[GitExtensions.ZimerfeldTree]] and [[GitExtensions.ZimerfeldCommitMsg]].
+
+## ✅ Recently done
+- [x] **Landing-page fix — PT title/subtitle line break** — 2026-07-07: the landing page (`index.html`, served at **lfs.zimerfeld.com** via GitHub Pages) shares an i18n template with the rule `html[data-lang="pt"] .lang-pt{display:inline}`, which forced **every** Portuguese element to `inline` — including `h2`/`h3` — making the title/subtitle collapse into the following text when the site opens in PT (EN was fine, since `h2`/`h3` are `block` by default). **1-line CSS fix:** `html[data-lang="pt"] h2.lang-pt,html[data-lang="pt"] h3.lang-pt{display:block}` — restores the break only on PT titles/subtitles, with no effect on EN. Shipped via GitFlow (`feature/pt-heading-break` → `develop` → release → `main`) + tag **`202607071915pt-heading-break`**; `CNAME` preserved; deploy verified live.
 
 ## 🔗 Links
 - [[🏠 Home (EN)|🏠 Home]] · [[📦 GitExtensions.ZimerfeldLFS (EN)|📦 GitExtensions.ZimerfeldLFS]] · [[🔢 Versionamento (EN)|🔢 Versioning]] · [[🚀 Deploy em Produção (Prod) (EN)|🚀 Production Deploy (Prod)]]

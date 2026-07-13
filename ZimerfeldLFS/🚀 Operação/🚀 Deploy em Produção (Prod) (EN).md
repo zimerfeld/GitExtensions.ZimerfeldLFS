@@ -8,8 +8,6 @@ tags: [operacao, runbook, prod, release, nupkg, nuget]
 
 # 🚀 Production Deploy (Prod)
 
-> 🇧🇷 Leia esta página em português → [[🚀 Deploy em Produção (Prod)]]
-
 How to publish a new plugin version: generate the release `.nupkg` package and distribute it (NuGet + GitHub release), from where the GitExtensions Plugin Manager discovers it.
 
 ## ⚡ TL;DR — the single command

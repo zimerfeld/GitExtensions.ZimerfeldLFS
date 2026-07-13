@@ -9,8 +9,6 @@ tags: [meta, protocolo]
 
 # 🧭 Como usar este cofre (protocolo do Claude)
 
-> 🇺🇸 Read this page in English → [[🧭 Como usar este cofre (EN)]]
-
 > [!important] Protocolo de memória
 > No **início** de cada sessão, leia: [[🏠 Home]] (mapa por prioridade), [[📌 Backlog]] (ponto de retomada), [[🔑 Fatos-Chave]] e a nota-mãe [[📦 GitExtensions.ZimerfeldLFS]].
 > No **fim** de cada sessão, atualize [[📌 Backlog]] e as notas afetadas (conteúdo + `atualizado:` do frontmatter).

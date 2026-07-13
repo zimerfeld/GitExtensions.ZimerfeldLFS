@@ -447,16 +447,16 @@ public sealed class LfsForm : Form
 
     // ── Language selection ──────────────────────────────────────────────────────
 
+    // Combo display order — the rule is AUTO / PT / EN / ES (AUTO pre-selected).
+    // This is decoupled from the AppLanguage enum's numeric order on purpose.
+    private static readonly AppLanguage[] LangOrder =
+        [AppLanguage.Automatic, AppLanguage.Portuguese, AppLanguage.English, AppLanguage.Spanish];
+
     private void OnLanguageChanged(object? sender, EventArgs e)
     {
         if (_suppressLangEvent) return;
-        var lang = _cboLanguage.SelectedIndex switch
-        {
-            1 => AppLanguage.English,
-            2 => AppLanguage.Portuguese,
-            3 => AppLanguage.Spanish,
-            _ => AppLanguage.Automatic,
-        };
+        int i = _cboLanguage.SelectedIndex;
+        var lang = (i >= 0 && i < LangOrder.Length) ? LangOrder[i] : AppLanguage.Automatic;
         I18n.SetLanguage(lang);
         ApplyLanguage();
     }
@@ -508,9 +508,12 @@ public sealed class LfsForm : Form
     private void PopulateLanguageCombo()
     {
         _suppressLangEvent = true;
-        int sel = _cboLanguage.SelectedIndex >= 0 ? _cboLanguage.SelectedIndex : (int)I18n.Current;
+        int sel = _cboLanguage.SelectedIndex >= 0
+            ? _cboLanguage.SelectedIndex
+            : Math.Max(0, Array.IndexOf(LangOrder, I18n.Current));
         _cboLanguage.Items.Clear();
-        _cboLanguage.Items.AddRange([_t["langAutomatic"], _t["langEnglish"], _t["langPortuguese"], _t["langSpanish"]]);
+        // Order must match LangOrder: AUTO / PT / EN / ES.
+        _cboLanguage.Items.AddRange([_t["langAutomatic"], _t["langPortuguese"], _t["langEnglish"], _t["langSpanish"]]);
         _cboLanguage.SelectedIndex = sel;
         _suppressLangEvent = false;
     }

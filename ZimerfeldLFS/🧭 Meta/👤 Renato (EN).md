@@ -9,8 +9,6 @@ tags: [meta, preferencia, contexto, pessoa]
 
 # 👤 Renato Zimerfeld
 
-> 🇧🇷 Leia esta página em português → [[👤 Renato]]
-
 ## Identity
 - Email: renato.zimerfeld@gmail.com
 - Language: **Portuguese (BR)** — always reply in Portuguese

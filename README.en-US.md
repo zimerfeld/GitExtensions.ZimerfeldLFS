@@ -161,7 +161,7 @@ A typical restore sequence after a fresh clone that skipped LFS objects: **git l
 ## Bottom bar
 
 - **Show Debug** — reveals each control's internal `Name` as a tooltip (a diagnostics aid); the choice is persisted to `ZimerfeldLFS.uisettings.json`.
-- **Language** — *Automatic* (follows the OS), *English*, *Portuguese*, or *Spanish*. Changing it re-labels the entire window immediately.
+- **Language** — *Automatic* (follows the OS), *Portuguese*, *English*, or *Spanish*. Changing it re-labels the entire window immediately.
 - **Close** — closes the window (also the <kbd>Esc</kbd> / Cancel action). The window is non-modal, so GitExtensions stays usable while it is open.
 
 ## Troubleshooting

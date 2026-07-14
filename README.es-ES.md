@@ -161,7 +161,7 @@ Una secuencia típica de restauración tras un clon nuevo que omitió los objeto
 ## Barra inferior
 
 - **Show Debug** — revela el `Name` interno de cada control como tooltip (una ayuda de diagnóstico); la elección se persiste en `ZimerfeldLFS.uisettings.json`.
-- **Language** — *Automático* (sigue el SO), *Inglés*, *Portugués* o *Español*. Cambiarlo vuelve a etiquetar toda la ventana de inmediato.
+- **Language** — *Automático* (sigue el SO), *Portugués*, *Inglés* o *Español*. Cambiarlo vuelve a etiquetar toda la ventana de inmediato.
 - **Close** — cierra la ventana (también es la acción de <kbd>Esc</kbd> / Cancelar). La ventana es no modal, así que GitExtensions permanece utilizable mientras está abierta.
 
 ## Solución de problemas

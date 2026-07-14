@@ -6,8 +6,12 @@ using System.Text.Json;
 
 namespace GitExtensions.ZimerfeldLFS;
 
-/// <summary>User-selectable UI language. <see cref="Automatic"/> follows the OS UI culture.</summary>
-public enum AppLanguage { Automatic, English, Portuguese, Spanish }
+/// <summary>
+/// User-selectable UI language. <see cref="Automatic"/> follows the OS UI culture.
+/// Declared in the canonical selector order — AUTO / PT / EN / ES.
+/// Persistence keys off the member name, so this order is safe to change.
+/// </summary>
+public enum AppLanguage { Automatic, Portuguese, English, Spanish }
 
 /// <summary>
 /// Loads per-window text dictionaries (embedded JSON resources, one file per language) and persists

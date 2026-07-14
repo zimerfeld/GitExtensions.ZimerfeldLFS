@@ -86,8 +86,8 @@
   .step{display:flex;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
   .step::before{counter-increment:s;content:counter(s);flex:0 0 32px;height:32px;border-radius:50%;
     display:grid;place-items:center;font-weight:800;background:var(--accent);color:#fff}
-  .step div{font-size:14.5px}
-  code{background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:13px}
+  .step div{font-size:14.5px;min-width:0}
+  code{background:var(--panel-2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:13px;overflow-wrap:anywhere}
   /* langbox */
   .langlinks{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
   .langlinks a{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);

@@ -161,7 +161,7 @@ Uma sequência típica de restauração após um clone que pulou os objetos LFS:
 ## Barra inferior
 
 - **Mostrar Debug** — revela o `Name` interno de cada controle como tooltip (auxílio de diagnóstico); a escolha é persistida em `ZimerfeldLFS.uisettings.json`.
-- **Idioma** — *Automático* (segue o SO), *Inglês*, *Português* ou *Espanhol*. Trocar re-rotula toda a janela imediatamente.
+- **Idioma** — *Automático* (segue o SO), *Português*, *Inglês* ou *Espanhol*. Trocar re-rotula toda a janela imediatamente.
 - **Fechar** — fecha a janela (também é a ação <kbd>Esc</kbd> / Cancelar). A janela é não-modal, então o GitExtensions continua utilizável enquanto ela está aberta.
 
 ## Solução de problemas

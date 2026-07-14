@@ -41,6 +41,14 @@
   nav img{width:30px;height:30px;border-radius:7px}
   nav .brand{font-weight:700;letter-spacing:.2px}
   nav .spacer{flex:1}
+  nav .navlinks{display:flex;align-items:center;gap:14px}
+  /* On narrow screens (<=860px) drop the nav links to a full-width row below the brand */
+  @media (max-width:860px){
+    nav .wrap{flex-wrap:wrap;height:auto;min-height:60px;row-gap:8px;padding-top:8px;padding-bottom:8px}
+    nav .spacer{order:3}
+    nav .toggle{order:4}
+    nav .navlinks{order:5;flex-basis:100%}
+  }
   .toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
   .toggle button{background:transparent;color:var(--muted);border:0;padding:6px 12px;cursor:pointer;font-size:13px;font-weight:600}
   .toggle button.active{background:var(--accent);color:#fff}
@@ -99,12 +107,14 @@
     <img src="https://raw.githubusercontent.com/zimerfeld/GitExtensions.ZimerfeldLFS/main/src/GitExtensions.ZimerfeldLFS/Resources/icon-128.png" alt="GitExtensions.ZimerfeldLFS icon">
     <span class="brand">GitExtensions.ZimerfeldLFS</span>
     <span class="spacer"></span>
-    <a href="#features" class="lang-en" style="color:var(--muted);font-size:14px">Features</a>
-    <a href="#features" class="lang-pt" style="color:var(--muted);font-size:14px">Funcionalidades</a>
-    <a href="#features" class="lang-es" style="color:var(--muted);font-size:14px">Funciones</a>
-    <a href="#install" class="lang-en" style="color:var(--muted);font-size:14px">Install</a>
-    <a href="#install" class="lang-pt" style="color:var(--muted);font-size:14px">Instalação</a>
-    <a href="#install" class="lang-es" style="color:var(--muted);font-size:14px">Instalación</a>
+    <div class="navlinks">
+      <a href="#features" class="lang-en" style="color:var(--muted);font-size:14px">Features</a>
+      <a href="#features" class="lang-pt" style="color:var(--muted);font-size:14px">Funcionalidades</a>
+      <a href="#features" class="lang-es" style="color:var(--muted);font-size:14px">Funciones</a>
+      <a href="#install" class="lang-en" style="color:var(--muted);font-size:14px">Install</a>
+      <a href="#install" class="lang-pt" style="color:var(--muted);font-size:14px">Instalação</a>
+      <a href="#install" class="lang-es" style="color:var(--muted);font-size:14px">Instalación</a>
+    </div>
     <div class="toggle" role="group" aria-label="Language">
       <button data-set="auto">AUTO</button>
       <button data-set="pt">PT</button>

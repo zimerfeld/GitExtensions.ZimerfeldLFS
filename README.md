@@ -26,9 +26,9 @@
 
 ![PT](https://raw.githubusercontent.com/zimerfeld/ZimerfeldCommitMsg/main/screenshots/screenshotBR.png) **Detalhes técnicos, funcionalidades, printscreens e instalação** encontram-se disponíveis nas versões por idioma. **Clique aqui:**
 
-- [English (United States)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.en-US.md)
-- [Português (Brasil)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.pt-BR.md)
-- [Español (España)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.es-ES.md)
+- 🇧🇷 [Português (Brasil)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.pt-BR.md)
+- 🇺🇸 [English (United States)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.en-US.md)
+- 🇪🇸 [Español (España)](https://github.com/zimerfeld/GitExtensions.ZimerfeldLFS/blob/main/README.es-ES.md)
 
 ## ⚡ Executive summary / Resumo executivo
 
